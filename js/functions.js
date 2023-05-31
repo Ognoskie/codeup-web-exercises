@@ -8,8 +8,7 @@
 //  * Example
 //  * > sayHello("codeup") // returns "Hello, codeup!"
 function sayHello(name){
-    return(`Hello, ${name}`;
-
+    return `Hello, ${name}!`;
 }
 const functionResp = sayHello(" codeup!")
 console.log(functionResp);
@@ -124,5 +123,4 @@ const applyDiscount = (originalPrice, discountPercentage) => {
     return orginialPrice * (1 - discountPercentage);
 };
 
-    .
 console.log(applyDiscount(45.99, 0.12));
