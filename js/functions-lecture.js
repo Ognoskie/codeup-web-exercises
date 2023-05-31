@@ -54,3 +54,34 @@ function divideByTwo(num){
 }
 
 console.log(addFourDivideByTwo(5));
+
+// function declaration
+function sayHello(){
+    console.log("Hello")
+}
+
+sayHello();
+
+// function expression
+// const sayHello = function(){
+//     console.log("Hello")
+// };
+//
+// sayHello();
+
+
+// arrow function
+
+// const sayHello = () => {console.log("Hello")};
+//
+// sayHello();
+
+// IIFE
+(function(){
+
+})()
+
+function addSum(num1, num2){
+    console.log(num1 + num2);
+}
+addSum(num2, num3)
