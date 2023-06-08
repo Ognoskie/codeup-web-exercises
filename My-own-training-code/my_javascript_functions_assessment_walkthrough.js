@@ -1,3 +1,5 @@
+// FUNCTIONS ASSESSMENT WALKTHROUGH!!!!!
+
 // iaANumber walkthrough
 
 // Define a function named isANumber that takes in a value and returns true if the input is numeric, or false if the input is not numeric. Numeric strings should not be considered as numbers in this function, and should return false.
@@ -14,12 +16,12 @@
 
 function isANumber(input){
     if (typeof input === "boolean" || input === null) {
-        return false
+        return false;
     }
     if (isNaN(input)){
-        return false
+        return false;
     }else{
-        return true
+        return true;
     }
 }
 
@@ -40,7 +42,7 @@ function increment(input) {
     if (isANumber(input)) {
         return parseInt(input) + 1;
     }else{
-        return false
+        return false;
     }
 }
 
@@ -126,12 +128,19 @@ function parseNumber(input){
 // add("Monday", "Tuesday")    // false
 // add(null)                   // false
 
-function add(){
-
+// break down
+// write function name add
+// takes two inputs
+//If both inputs provided are numeric
+// return the sum of both inputs
+// if one or both inputs is not numeric return false
+function add(input1, input2){
+    if (isANumber(input1) && isANumber(input2)) {
+        return parseNumber(input1) + parseNumber(input2);
+    } else {
+        return false;
+    }
 }
-
-
-
 
 
 
@@ -146,8 +155,12 @@ function add(){
 // multiply(true, false)       // false
 // multiply("Monday")          // false
 
-function multiply(){
-
+function multiply(input1, input2){
+    if (isANumber(input1) && isANumber(input2)) {
+        return (input1) * (input2);
+    } else {
+        return false;
+    }
 }
 
 
@@ -168,8 +181,12 @@ function multiply(){
 // square([1, 2, 3])           // false
 // square()                    // false
 
-function square(){
-
+function square(input){
+    if (isANumber(input)){
+        return input ** 2;
+    } else{
+        return false;
+    }
 }
 
 
@@ -184,8 +201,14 @@ function square(){
 // sumOfSquares(null)          // false
 // sumOfSquares()              // false
 
-function sumOfSquares(){
-
+function sumOfSquares(input1, input2){
+    if (isANumber(input1) && isANumber(input2)) {
+        const squareOfInput1 = input1 ** 2;
+        const squareOfInput2 = input2 ** 2;
+        return squareOfInput1 + squareOfInput2;
+    }else {
+        return false;
+    }
 }
 
 // Write a function named isPalindrome that takes in a single input. If the input is a numeric string, then return false. If the input is a string, then return true if the string is the same forwards as it is backwards. Return false if the string is different forwards from backwards. Ignore capitalization.
@@ -197,6 +220,20 @@ function sumOfSquares(){
 // isPalindrome(232)           // false
 // isPalindrome(null)          // false
 
-function isPalindrome(){
+function isPalindrome(input){
+    if (input === ""){
+        return true;
+    }
+    if (typeof input !== "string" || isANumber(input)) {
+        return false;
+    } else {
+       const reverseInput = input.split('').reverse().join('')
+        if(input.toLowerCase() === reverseInput.toLowerCase()) {
+            return true;
+        }else {
+            return false;
+        }
+
+    }
 
 }

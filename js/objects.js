@@ -109,7 +109,19 @@ function discount(input) {
      */
 
 
+const books = [
+        {
+            book: "How to think like a roman emperor",
+            genre: "Philosophy",
+            about: "A stoic mindset",
+            author: {
+                name: "Donald Robertson"
+            }
 
+        }
+
+
+    ]
 
 
 
