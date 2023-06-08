@@ -26,7 +26,7 @@
 
 
 // function numberOneThroughFifty() {
-//     return prompt("Enter a odd number from 1 to 50!")
+//     return prompt("Enter an odd number from 1 to 50!")
 // }
 //
 // function promptUntilOdd() {

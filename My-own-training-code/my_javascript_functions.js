@@ -146,3 +146,17 @@ function isLowerCase(letter) {
 function hasLowerCase(string) {
     return /[a-z]/.test(string);
 }
+
+
+
+// TreeHouse
+
+function max(num1, num2) {
+    if (num1 === Math.max()){
+        return num1
+    }else {
+        return num2
+    }
+}
+
+console.log(max(89, 7));

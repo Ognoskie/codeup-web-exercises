@@ -220,14 +220,14 @@
         TODO - write a for loop that prints all integers from 20 down to 1
      */
 
- for (let i = 2; i < 102; i += 2) {
-     console.log(i);
- }
-
- for (let i = 20; i >= 1; --i) {
-     console.log(i);
- }
-
+ // for (let i = 2; i < 102; i += 2) {
+ //     console.log(i);
+ // }
+ //
+ // for (let i = 20; i >= 1; --i) {
+ //     console.log(i);
+ // }
+ //
 
 
 
@@ -318,3 +318,15 @@
             If the years have already been displayed in the list, continue to the next year.
 
      */
+
+
+ function getRandomNUmber(upper) {
+     return Math.floor(Math.random() * upper ) + 1;
+ }
+
+ let counter = 0;
+
+ while ( counter < 10 ) {
+     console.log(`The random number is ${getRandomNUmber(10)}`);
+     counter += 1;
+ }
