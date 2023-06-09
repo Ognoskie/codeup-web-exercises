@@ -22,12 +22,11 @@
      *  > console.log(person.lastName) // "Sanchez"
      */
 
-// const person = {
-//     firstName: "Braden",
-//     lastName: "Wittkop"
-//     };
-//     console.log(person.firstName);
-//     console.log(person.lastName);
+const person = {
+    firstName: "Braden",
+    lastName: "Wittkop"
+    };
+    console.log(person);
 
 
 
@@ -49,14 +48,23 @@
      * > console.log(person.sayHello()) // "Hello from Rick Sanchez!"
      */
 
-  const person = {
-      firstName: "Braden",
-      LastName: "Wittkop",
-        sayHello: function () {
-            console.log(`Hello from ${this.firstName + ' ' + this.LastName}!` )
-        }
+  // const person = {
+  //     firstName: "Braden",
+  //     LastName: "Wittkop",
+  //       sayHello: function () {
+  //           console.log(`Hello from ${this.firstName + ' ' + this.LastName}!` )
+  //       }
+  //   }
+  //   console.log(person.sayHello());
+
+
+    person.sayHello =function () {
+        return `Hello from ${this.firstName} ${this.lastName}`;
     }
     console.log(person.sayHello());
+
+
+
 
 
   /** TODO:
@@ -73,18 +81,31 @@
      * and console.log the relevant messages for each person
      */
 
-function discount(input) {
-    if (input <= 200){
-        return parseFloat(prompt("Congratulations! Since you spent over $200 you get a 12% discount! "))
-    }
+  function hebDiscountString(shopper) {
+      let name = shopper.name;
+      let amount = (shopper.amount).toFixed(2);
+      let discount = (shopper.amount * 0.12).toFixed(2);
+      let discountedAmount = (shopper.amount * 0.88).toFixed(2);
+      let message = "";
+      if(shopper.amount > 200) {
+          message = message + `${name} spent $${amount}. `;
+          message += `You got the discount! You just saved: $${discount} `;
+          message += `Your new total is: $${discountedAmount}`;
+          return message;
+      } else {
+          return (`${name} spent $${amount}. You did not get the discount. You saved nothing :( Your total is: $${amount}`);
+      }
   }
 
+    const shoppers = [
+        {name: 'Cameron', amount: 180},
+        {name: 'Ryan', amount: 250},
+        {name: 'George', amount: 320}
+    ];
 
-
-
-
-
-
+    shoppers.forEach((shopper) => {
+        console.log(hebDiscountString(shopper));
+    })
 
 
 
@@ -109,20 +130,37 @@ function discount(input) {
      */
 
 
-const books = [
-        {
-            book: "How to think like a roman emperor",
-            genre: "Philosophy",
-            about: "A stoic mindset",
-            author: {
-                name: "Donald Robertson"
-            }
-
-        }
+    const foundationBook = {title: "Foundation", author: {firstName: "Isaac", lastName: "Asimov"}};
 
 
-    ]
+    // let books = [
+    //     {
+    //         title: "Lord of the Rings",
+    //         author: {
+    //             firstName: "J.R.R",
+    //             lastName: "Tolkien"
+    //         }
+    //     },
+    //     {title: "Foundation", author: {firstName: "Isaac", lastName: "Asimov"}},
+    //     {title: "Hitchhiker's Guide to the Galaxy", author: {firstName: "Douglas", lastName: "Adams"}},
+    //     {title: "Lamb: The Gospel According to Biff, Christ's Childhood Pal", author: {firstName: "Christopher", lastName: "Moore"}},
+    //     {title: "Coraline", author: {firstName: "Neil", lastName: "Gaiman"}},
+    // ];
+    //
+    // // console.log(books);
+    //
+    // books.push({
+    //     title: "Twilight",
+    //     author: {
+    //         firstName: "Stephenie",
+    //         lastName: "Meyer",
+    //     },
+    // });
 
+    // console.log(books);
+
+    // console.log(books[0].author.lastName);
+    // console.log(books.indexOf(foundationBook));
 
 
 
@@ -157,6 +195,35 @@ const books = [
      *      ...
      */
 
+
+    function createBook(title, authorFirstName, authorLastName) {
+        return {
+            title: title,
+            author: {
+                firstName: authorFirstName,
+                lastName: authorLastName}
+        };
+    }
+
+    let books = [
+        createBook("Lord of the Rings", "J.R.R.", "Tolkien"),
+        createBook("Foundation", "Isaac", "Asimov"),
+        createBook("Hitchhiker's Guide to the Galaxy", "Douglass", "Adams"),
+        createBook("Lamb: The Gospel According to Biff, Christ's Childhood Pal", "Christopher", "Moore"),
+        createBook("Coraline", "Neil", "Gaiman"),
+    ];
+
+    books.push(createBook("Twilight", "Stephenie", "Meyer"));
+
+
+    function showBookInfo(book) {
+        console.log(`Title: ${book.title}`);
+        console.log(`Author: ${book.author.firstName} ${book.author.lastName}`);
+    }
+    showBookInfo(books[2]);
+
+
+})();
 
 
 
