@@ -160,3 +160,9 @@ function max(num1, num2) {
 }
 
 console.log(max(89, 7));
+
+
+const getRandomNumber = (upper) => {
+    const randomNumber = Math.floor(Math.random() * upper ) + 1;
+    return randomNumber;
+};
