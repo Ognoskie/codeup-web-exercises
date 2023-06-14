@@ -1,5 +1,6 @@
 :root {
-    --primary: #a003a0;
+    --primary: #967E76;
+    background-color: blanchedalmond;
 }
 
 .fancy-header {
@@ -20,4 +21,49 @@
 
 #id-name {
 
+}
+
+h1, h2, h3, h4, h5, h6{
+   text-align: center;
+    color: #967E76;
+    text-underline-position: under;
+}
+
+body {
+    background-image:linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url(../images/space-pic.jpeg); ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right;
+    font-family: "Audiowide", sans-serif;
+}
+
+ul, ol, li{
+    font-size: 1rem;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid black;
+}
+
+a:link {
+    color: #ff0000;
+    text-decoration: none;
+    border-bottom: 1px solid;
+}
+/* visited link */
+a:visited {
+    color: #ff00ff;
+}
+/* mouse over link */
+a:hover {
+    color: #00ff00;
+    border-bottom: none;
+}
+/* active link */
+a:active {
+    color: #00ffff;
 }
