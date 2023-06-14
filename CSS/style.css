@@ -1,4 +1,23 @@
-h1 {
-    color: purple;
+:root {
+    --primary: #a003a0;
+}
+
+.fancy-header {
+    color: var(--primary);
+}
+
+.section {
+    background-color: #eee;
+}
+
+.section-border {
+    border-bottom: 1px solid #000;
+}
+
+.class-name {
+
+}
+
+#id-name {
 
 }
