@@ -23,6 +23,7 @@ header.container {
     min-height: 80px;
     background-color: white;
     box-shadow: 3px -4px 15px -4px #000000;
+    position: relative;
 }
 
 
