@@ -1,0 +1,10 @@
+.container-fluid.bw-hero {
+    min-height: 30vh;
+    background-image: url("https://images.pexels.com/photos/2233348/pexels-photo-2233348.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2 ");
+    background-position: bottom;
+    background-size: cover;
+}
+.container-h h2 {
+    margin: 20px 0 0 20px;
+}
+
