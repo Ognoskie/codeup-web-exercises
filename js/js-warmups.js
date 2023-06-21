@@ -110,13 +110,40 @@ makeUpperCase(null) // returns false
 
 /// walkthrough
 
-function returnUserObject(username, password, email) {
-    return {
-        username: username,
-        password: password,
-        email: email
+// function returnUserObject(username, password, email) {
+//     return {
+//         username: username,
+//         password: password,
+//         email: email
+//
+//     }
+// }
+//
+// console.log(returnUserObject('jreich', 'password123', 'jreich@email.com'));
 
+
+// ================================= WARM UP
+// Create a function, returnProduct, that takes in an array of numbers and returns the product of all the numbers.
+//     Assume all element in the input array are valid numbers. Assume all array inputs have at least 1 number.
+// returnProduct([1, 2, 3]) // returns 1 * 2 * 3 = 6
+// returnProduct([3, 3, 3]) // returns 3 * 3 * 3 = 27
+// returnProduct([4, 1, 2]) // returns 4 * 1 * 2 = 8
+// returnProduct([4, 0, 2]) // returns 4 * 0 * 2 = 0
+// returnProduct([5, 3, 2]) // returns 5 * 3 * 2 = 30
+
+function returnProduct(numbers) {
+    let product = 1;
+    for (let i = 0; i < numbers.length; i++) {
+        product *= numbers[i];
     }
+    return product;
 }
 
-console.log(returnUserObject('jreich', 'password123', 'jreich@email.com'));
+// walkthrough
+
+
+
+
+console.log(returnProduct([1, 2, 3])); // returns 1 * 2 * 3 = 6
+console.log(returnProduct([3, 3, 3])); // returns 3 * 3 * 3 = 27
+console.log(returnProduct([4, 1, 2])); // returns 4 * 1 * 2 = 8
