@@ -8,15 +8,15 @@
     margin: 20px 0 0 20px;
 }
 
-
-div.card.container-fluid {
-    padding: 0 0;
+div.card-header {
+    background-color: #30A2FF;
 }
 
 
 div.card-header-ht {
     background-color: #30A2FF;
     width: 100%;
+    padding: 8px 16px;
 }
 
 
