@@ -42,3 +42,10 @@ console.log(parseInt(Math.random() * 6));
 // Math.ceil() rounds the number up to the ceiling if you will Ex. Math.ceil(1.2) will come out to 2
 
 // Ex. Math.floor(Math.random() * 6); or Math.ceil(Math.random() * 6);
+
+const dieRoll = Math.floor(Math.random() * 6 ) + 1;
+console.log(`You rolled a ${dieRoll}.`);
+
+const temperature = 37.5;
+const tempRounded = Math.round(temperature)
+const tempRoundDown = Math.floor(temperature)
