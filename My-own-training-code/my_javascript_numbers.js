@@ -49,3 +49,37 @@ console.log(`You rolled a ${dieRoll}.`);
 const temperature = 37.5;
 const tempRounded = Math.round(temperature)
 const tempRoundDown = Math.floor(temperature)
+
+// collect input from a user
+const inputHigh = prompt(`Please provide a number`);
+
+// convert the input to a number
+const highNumber = parseInt(inputHigh);
+
+
+if (highNumber) {
+
+    // use Math.random() and the users number to generate a random number
+    const randomNumber = Math.floor( Math.random() * highNumber ) + 1;
+
+
+    // create a message displaying the random number
+    console.log(`${randomNumber} is a random number between 1 and ${highNumber}.`);
+
+
+} else{
+    console.log(`You need to provide a number. Try again.`);
+}
+
+
+
+
+// alert(prompt("Please pick a random number"))
+//  function randomNumber (input) {
+//     if (typeof input === "number") {
+//         return Math.random()
+//     }else {
+//         return false
+//     }
+//  }
+
