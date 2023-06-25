@@ -334,12 +334,21 @@
 
 //////////////// do while loop lecture ///////////////////
 
- function getRandomNUmber(upper) {
-     return Math.floor(Math.random() * upper ) + 1;
- }
+ // function getRandomNUmber(upper) {
+ //     return Math.floor(Math.random() * upper ) + 1;
+ // }
+ //
+ // let counter = 0;
+ // do {
+ //     console.log(`The random number is ${getRandomNUmber(10)}`);
+ //     counter ++;
+ // } while (counter < 10);
 
- let counter = 0;
- do {
-     console.log(`The random number is ${getRandomNUmber(10)}`);
-     counter ++;
- } while (counter < 10);
+
+
+ let count = 1;
+ while (count < 26) {
+     console.log(count);
+     count += 1;
+ }
+ console.log(count);
