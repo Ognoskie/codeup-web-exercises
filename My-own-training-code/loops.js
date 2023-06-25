@@ -319,14 +319,27 @@
 
      */
 
+////////////////// while loop tree house lecture/////////////////
+
+ // function getRandomNUmber(upper) {
+ //     return Math.floor(Math.random() * upper ) + 1;
+ // }
+ //
+ // let counter = 0;
+ //
+ // while ( counter < 10 ) {
+ //     console.log(`The random number is ${getRandomNUmber(10)}`);
+ //     counter += 1;
+ // }
+
+//////////////// do while loop lecture ///////////////////
 
  function getRandomNUmber(upper) {
      return Math.floor(Math.random() * upper ) + 1;
  }
 
  let counter = 0;
-
- while ( counter < 10 ) {
+ do {
      console.log(`The random number is ${getRandomNUmber(10)}`);
-     counter += 1;
- }
+     counter ++;
+ } while (counter < 10);
