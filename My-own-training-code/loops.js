@@ -367,35 +367,124 @@
  // Output: 1,9,10
 
 
+ //
+ // function FindIntersection(strArr) {
+ //  const list1 = strArr[0].split(", ");
+ //  const list2 = strArr[1].split(", ");
+ //  const intersection = [];
+ //
+ //  let i = 0;
+ //  let j = 0;
+ //
+ //  while (i < list1.length && j < list2.length) {
+ //   const num1 = parseInt(list1[i]);
+ //   const num2 = parseInt(list2[j]);
+ //
+ //   if (num1 === num2) {
+ //    intersection.push(num1);
+ //    i++;
+ //    j++;
+ //   } else if (num1 < num2) {
+ //    i++;
+ //   } else {
+ //    j++;
+ //   }
+ //  }
+ //
+ //  if (intersection.length === 0) {
+ //   return "false";
+ //  } else {
+ //   return intersection.join(",");
+ //  }
+ // }
+ //
+ // console.log(FindIntersection(readline()));
 
- function FindIntersection(strArr) {
-  const list1 = strArr[0].split(", ");
-  const list2 = strArr[1].split(", ");
-  const intersection = [];
 
-  let i = 0;
-  let j = 0;
+ /////////////////////ChatGPT loops exercises//////////////////////////////////////
 
-  while (i < list1.length && j < list2.length) {
-   const num1 = parseInt(list1[i]);
-   const num2 = parseInt(list2[j]);
 
-   if (num1 === num2) {
-    intersection.push(num1);
-    i++;
-    j++;
-   } else if (num1 < num2) {
-    i++;
-   } else {
-    j++;
-   }
-  }
+ // /////Problem 1: Print numbers from 1 to 10///////
+ //
+ // for (let i = 1; i <= 10; i++) {
+ //  console.log(i);
+ // }
+ //
+ //
 
-  if (intersection.length === 0) {
-   return "false";
-  } else {
-   return intersection.join(",");
-  }
+ //////////////Problem 2: Print even numbers from 1 to 20///////////
+
+ // for (let i = 2; i <= 20; i += 2) {
+ //  console.log(i);
+ // }
+ //
+ //
+ // ///////////Problem 3: Calculate the sum of numbers from 1 to 100////////////////////
+ //
+ //
+ // let sum = 0;
+ // for (let i = 1; i <= 100; i++) {
+ //  sum += i;
+ // }
+ // console.log(sum);
+ //
+ // //////////////Problem 4: Print the elements of an array////////////////
+ //
+ // const arr = [1, 2, 3, 4, 5];
+ // for (let i = 0; i < arr.length; i++) {
+ //  console.log(arr[i]);
+ // }
+
+
+
+
+
+
+
+
+
+//  1. Print numbers from 1 to 10 using a for loop.
+
+ for (let i = 1; i <= 10; i++) {
+  console.log(i);
  }
 
- console.log(FindIntersection(readline()));
+
+
+//   2. Print even numbers from 1 to 20 using a while loop.
+//
+//   3.Calculate the sum of all numbers from 1 to 100 using a for loop.
+//
+//   4.Given an array of numbers, find the maximum number using a for loop.
+//
+//   5.Given a string, count the number of vowels (a, e, i, o, u) using a for loop.
+//
+// 6. Print the multiplication table of a given number (e.g., 5) using a nested for loop.
+//
+// 7.Write a program to check if a given number is prime or not using a for loop.
+//
+// 8.Given an array of names, print each name on a new line using a for...of loop.
+//
+// 9.Generate a Fibonacci sequence up to a given number (e.g., 100) using a while loop.
+//
+// 10.Write a program to reverse a given string using a for loop.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
