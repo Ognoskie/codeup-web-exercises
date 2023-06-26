@@ -346,9 +346,56 @@
 
 
 
- let count = 1;
- while (count < 26) {
-     console.log(count);
-     count += 1;
+ // let count = 1;
+ // while (count < 26) {
+ //     console.log(count);
+ //     count += 1;
+ // }
+ // console.log(count);
+
+
+
+ ///////////////////coderbyte////////////////////////////////
+
+ // Have the function FindIntersection(strArr) read the array of strings stored in strArr which will contain 2 elements: the first element will represent a list of comma-separated numbers sorted in ascending order, the second element will represent a second list of comma-separated numbers (also sorted). Your goal is to return a comma-separated string containing the numbers that occur in elements of strArr in sorted order. If there is no intersection, return the string false.
+ //     Examples
+
+
+ // Input: ["1, 3, 4, 7, 13", "1, 2, 4, 13, 15"]
+ // Output: 1,4,13
+ // Input: ["1, 3, 9, 10, 17, 18", "1, 4, 9, 10"]
+ // Output: 1,9,10
+
+
+
+ function FindIntersection(strArr) {
+  const list1 = strArr[0].split(", ");
+  const list2 = strArr[1].split(", ");
+  const intersection = [];
+
+  let i = 0;
+  let j = 0;
+
+  while (i < list1.length && j < list2.length) {
+   const num1 = parseInt(list1[i]);
+   const num2 = parseInt(list2[j]);
+
+   if (num1 === num2) {
+    intersection.push(num1);
+    i++;
+    j++;
+   } else if (num1 < num2) {
+    i++;
+   } else {
+    j++;
+   }
+  }
+
+  if (intersection.length === 0) {
+   return "false";
+  } else {
+   return intersection.join(",");
+  }
  }
- console.log(count);
+
+ console.log(FindIntersection(readline()));

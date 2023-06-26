@@ -51,10 +51,10 @@
         <div class="column">
             <ul class="nav nav-tabs" id="myTab" role="tablist">
                 <li class="nav-item" role="presentation">
-                    <button class="nav-link active" id="Size and Crust-tab" data-bs-toggle="tab" data-bs-target="#Size and Crust-tab-pane" type="button" role="tab" aria-controls="Size and Crust-tab-pane" aria-selected="true"><h6><span class="badge bg-secondary">1</span> Size and Crust</h6></button>
+                    <button class="nav-link active" id="Size-and-Crust-tab" data-bs-toggle="tab" data-bs-target="#Size-and-Crust-tab-pane" type="button" role="tab" aria-controls="Size-and-Crust-tab-pane" aria-selected="true"><h6><span class="badge bg-secondary">1</span> Size and Crust</h6></button>
                 </li>
                 <li class="nav-item" role="presentation">
-                    <button class="nav-link" id="Sauce and Cheese-tab" data-bs-toggle="tab" data-bs-target="#Sauce and Cheese-tab-pane" type="button" role="tab" aria-controls="Sauce and Cheese-tab-pane" aria-selected="false"><h6><span class="badge bg-secondary">2</span> Sauce and Cheese</h6></button>
+                    <button class="nav-link" id="Sauce-and-Cheese-tab" data-bs-toggle="tab" data-bs-target="#Sauce-and-Cheese-tab-pane" type="button" role="tab" aria-controls="Sauce-and-Cheese-tab-pane" aria-selected="false"><h6><span class="badge bg-secondary">2</span> Sauce and Cheese</h6></button>
                 </li>
                 <li class="nav-item" role="presentation">
                     <button class="nav-link" id="toppings-tab" data-bs-toggle="tab" data-bs-target="#toppings-tab-pane" type="button" role="tab" aria-controls="toppings-tab-pane" aria-selected="false"><h6><span class="badge bg-secondary">3</span> Toppings</h6></button>
@@ -64,18 +64,27 @@
                 </li>
             </ul>
             <div class="tab-content" id="myTabContent">
-                <div class="tab-pane fade show active" id="Size and Crust-tab-pane" role="tabpanel" aria-labelledby="Size and Crust-tab" tabindex="0"><div class="card">
-                    <div class="card-body">
-                        Choose Size and Crust
+                <div class="tab-pane fade show active" id="Size-and-Crust-tab-pane" role="tabpanel" aria-labelledby="Size-and-Crust-tab" tabindex="0"><div class="card">
+                    <div><div class="card-body ">
+                        Choose Size and Crust</div>
                         <div class="card container-fluid" style="width: 100%" >
                             <div class="card-header-ht">
                                 Hand tossed
                             </div>
                             <ul class="list-group list-group-flush">
                                 <li class="list-group-item">Garlic seasoned crust with a rich, buttery taste!</li>
-                                <li class="list-group-item">Small (10")</li>
-                                <li class="list-group-item">Medium (12")</li>
-                                <li class="list-group-item">Large (14")</li>
+                                <li class="list-group-item"><div class="form-check">
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                    <label class="form-check-label" for="flexRadioDefault1">
+                                        Small (10")</label></div></li>
+                                <li class="list-group-item"><div class="form-check">
+                                    <label for="flexRadioDefault2"></label><input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                                    <label class="form-check-label" for="flexRadioDefault1">
+                                        Medium (12")</label></div></li>
+                                <li class="list-group-item"><div class="form-check">
+                                    <label for="flexRadioDefault3"></label><input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3">
+                                    <label class="form-check-label" for="flexRadioDefault1">
+                                        Large (14")</label></div></li>
                             </ul>
                         </div>
 
@@ -87,9 +96,18 @@
                             </div>
                             <ul class="list-group list-group-flush">
                                 <li class="list-group-item">Thin enough for optimum crispy to crunchy ratio!</li>
-                                <li class="list-group-item">Small (10")</li>
-                                <li class="list-group-item">Medium (12")</li>
-                                <li class="list-group-item">Large (14")</li>
+                                <li class="list-group-item"><div class="form-check">
+                                    <input class="form-check-input" type="radio" name="radioDefault" id="radioDefault1">
+                                    <label class="form-check-label" for="radioDefault1">
+                                        Small (10")</label></div></li>
+                                <li class="list-group-item"><div class="form-check">
+                                    <label for="radioDefault2"></label><input class="form-check-input" type="radio" name="radioDefault" id="radioDefault2">
+                                    <label class="form-check-label" for="radioDefault2">
+                                        Medium (12")</label></div></li>
+                                <li class="list-group-item"><div class="form-check">
+                                    <label for="radioDefault3"></label><input class="form-check-input" type="radio" name="radioDefault" id="radioDefault3">
+                                    <label class="form-check-label" for="radioDefault3">
+                                        Large (14")</label></div></li>
                             </ul>
                         </div>
                     </div>
@@ -100,7 +118,61 @@
                     </div>
                 </div>
                 </div>
-                <div class="tab-pane fade" id="Sauce and Cheese-tab-pane" role="tabpanel" aria-labelledby="Sauce and Cheese-tab" tabindex="0"><p>text goes here for profile tab</p></div>
+                <div class="tab-pane fade" id="Sauce-and-Cheese-tab-pane" role="tabpanel" aria-labelledby="Sauce-and-Cheese-tab" tabindex="0">
+
+
+
+                    <div class="card">
+                        <div><div class="card-body ">
+                            Choose Size and Crust</div>
+                            <div class="card container-fluid" style="width: 100%" >
+                                <div class="card-header-ht">
+                                    Hand tossed
+                                </div>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">Garlic seasoned crust with a rich, buttery taste!</li>
+                                    <li class="list-group-item"><div class="form-check">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                        <label class="form-check-label" for="flexRadioDefault1">
+                                            Small (10")</label></div></li>
+                                    <li class="list-group-item"><div class="form-check">
+                                        <label for="flexRadioDefault2"></label><input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                                        <label class="form-check-label" for="flexRadioDefault1">
+                                            Medium (12")</label></div></li>
+                                    <li class="list-group-item"><div class="form-check">
+                                        <label for="flexRadioDefault3"></label><input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3">
+                                        <label class="form-check-label" for="flexRadioDefault1">
+                                            Large (14")</label></div></li>
+                                </ul>
+                            </div>
+
+                            <br>
+
+                            <div class="card container-fluid" style="width: 100%">
+                                <div class="card-header">
+                                    Crispy Thin
+                                </div>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">Thin enough for optimum crispy to crunchy ratio!</li>
+                                    <li class="list-group-item"><div class="form-check">
+                                        <input class="form-check-input" type="radio" name="radioDefault" id="radioDefault1">
+                                        <label class="form-check-label" for="radioDefault1">
+                                            Small (10")</label></div></li>
+                                    <li class="list-group-item"><div class="form-check">
+                                        <label for="radioDefault2"></label><input class="form-check-input" type="radio" name="radioDefault" id="radioDefault2">
+                                        <label class="form-check-label" for="radioDefault2">
+                                            Medium (12")</label></div></li>
+                                    <li class="list-group-item"><div class="form-check">
+                                        <label for="radioDefault3"></label><input class="form-check-input" type="radio" name="radioDefault" id="radioDefault3">
+                                        <label class="form-check-label" for="radioDefault3">
+                                            Large (14")</label></div></li>
+                                </ul>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
                 <div class="tab-pane fade" id="Toppings-tab-pane" role="tabpanel" aria-labelledby="Toppings-tab" tabindex="0">...</div>
                 <div class="tab-pane fade" id="Payment-tab-pane" role="tabpanel" aria-labelledby="Payment-tab" tabindex="0">...</div>
             </div>

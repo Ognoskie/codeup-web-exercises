@@ -131,19 +131,78 @@ makeUpperCase(null) // returns false
 // returnProduct([4, 0, 2]) // returns 4 * 0 * 2 = 0
 // returnProduct([5, 3, 2]) // returns 5 * 3 * 2 = 30
 
-function returnProduct(numbers) {
-    let product = 1;
-    for (let i = 0; i < numbers.length; i++) {
-        product *= numbers[i];
+// function returnProduct(numbers) {
+//     let product = 1;
+//     for (let i = 0; i < numbers.length; i++) {
+//         product *= numbers[i];
+//     }
+//     return product;
+// }
+//
+// // walkthrough
+//
+//
+//
+//
+// console.log(returnProduct([1, 2, 3])); // returns 1 * 2 * 3 = 6
+// console.log(returnProduct([3, 3, 3])); // returns 3 * 3 * 3 = 27
+// console.log(returnProduct([4, 1, 2])); // returns 4 * 1 * 2 = 8
+
+
+
+
+
+const salesData = [
+    {
+        month: 'January',
+        totalItemsSold: 0
+    },
+    {
+        month: 'February',
+        totalItemsSold: 5
+    },
+    {
+        month: 'March',
+        totalItemsSold: 2
+    },
+    {
+        month: 'April',
+        totalItemsSold: 10
+    },
+    {
+        month: 'May',
+        totalItemsSold: 30
     }
-    return product;
+];
+
+// const total = salesData[0].totalItemsSold +
+//     salesData[1].totalItemsSold +
+//     salesData[2].totalItemsSold +
+//     salesData[3].totalItemsSold +
+//     salesData[4].totalItemsSold;
+// console.log(total)
+
+
+// console.log(salesData[0].totalItemsSold);
+
+function returnTotalSales(salesData) {
+    let sum = 0
+    //for
+    for (let i = 0; i < salesData.length; i++) {
+        sum += salesData[i].totalItemsSold;
+    }
+    return sum;
 }
 
-// walkthrough
+console.log(returnTotalSales(salesData));
+
+//// for each
+
+// salesData.forEach(element => {
+//     sum += element.totalItemsSold;
+//     return sum;
+//
+// });
 
 
 
-
-console.log(returnProduct([1, 2, 3])); // returns 1 * 2 * 3 = 6
-console.log(returnProduct([3, 3, 3])); // returns 3 * 3 * 3 = 27
-console.log(returnProduct([4, 1, 2])); // returns 4 * 1 * 2 = 8

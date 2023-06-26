@@ -8,13 +8,14 @@
     margin: 20px 0 0 20px;
 }
 
-div.card-header {
+div div.card-body {
     background-color: #30A2FF;
+    color: #eeeeee;
 }
 
 
 div.card-header-ht {
-    background-color: #30A2FF;
+    background: #21252908;
     width: 100%;
     padding: 8px 16px;
 }
