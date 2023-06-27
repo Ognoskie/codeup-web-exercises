@@ -152,6 +152,68 @@ makeUpperCase(null) // returns false
 
 
 
+// const salesData = [
+//     {
+//         month: 'January',
+//         totalItemsSold: 0
+//     },
+//     {
+//         month: 'February',
+//         totalItemsSold: 5
+//     },
+//     {
+//         month: 'March',
+//         totalItemsSold: 2
+//     },
+//     {
+//         month: 'April',
+//         totalItemsSold: 10
+//     },
+//     {
+//         month: 'May',
+//         totalItemsSold: 30
+//     }
+// ];
+
+// const total = salesData[0].totalItemsSold +
+//     salesData[1].totalItemsSold +
+//     salesData[2].totalItemsSold +
+//     salesData[3].totalItemsSold +
+//     salesData[4].totalItemsSold;
+// console.log(total)
+
+
+// console.log(salesData[0].totalItemsSold);
+
+// function returnTotalSales(salesData) {
+//     let sum = 0
+//     //for
+//     for (let i = 0; i < salesData.length; i++) {
+//         sum += salesData[i].totalItemsSold;
+//     }
+//     return sum;
+// }
+//
+// console.log(returnTotalSales(salesData));
+
+//// for each
+
+// salesData.forEach(element => {
+//     sum += element.totalItemsSold;
+//     return sum;
+//
+// });
+
+
+
+// ================================= WARM UP
+
+// Create a function, returnAvgSales, that takes in an array of sales data objects and returns the average of all
+// total items sold. Assume all elements in the input array are valid sales data objects with a totalItemsSold
+// property. If the array is empty, return 0. If the array has one element, return the value of the totalItemsSold.
+//
+//     EXAMPLE...
+
 const salesData = [
     {
         month: 'January',
@@ -175,34 +237,22 @@ const salesData = [
     }
 ];
 
-// const total = salesData[0].totalItemsSold +
-//     salesData[1].totalItemsSold +
-//     salesData[2].totalItemsSold +
-//     salesData[3].totalItemsSold +
-//     salesData[4].totalItemsSold;
-// console.log(total)
+returnAvgSales(salesData) // returns 9.4
 
+function returnAvgSales() {
 
-// console.log(salesData[0].totalItemsSold);
+    if (salesData.length === 0) return 0;
+    if (salesData.length === 1) return salesData[0].totalItemsSold;
 
-function returnTotalSales(salesData) {
-    let sum = 0
-    //for
-    for (let i = 0; i < salesData.length; i++) {
-        sum += salesData[i].totalItemsSold;
-    }
-    return sum;
+    let total = 0
+    salesData.forEach(salesDataObj => {
+        total += salesDataObj.totalItemsSold;
+    })
+    return total / salesData.length;
+
 }
 
-console.log(returnTotalSales(salesData));
-
-//// for each
-
-// salesData.forEach(element => {
-//     sum += element.totalItemsSold;
-//     return sum;
-//
-// });
+console.log(returnAvgSales(salesData))
 
 
 
