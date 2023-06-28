@@ -499,6 +499,20 @@
  //1
 
 
+function pyramid() {
+ for (let i = 1; i <= 5; ++i){
+  let levelPyramid = '';
+  for (let j = 5; j <= 1; --j) {
+  return  levelPyramid = levelPyramid = i;
+  }
+  console.log(levelPyramid);
+ }
+}
+
+ console.log(pyramid());
+
+
+
 
 
 const fewestLetters = array => {
