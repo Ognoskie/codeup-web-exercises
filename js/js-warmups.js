@@ -214,45 +214,164 @@ makeUpperCase(null) // returns false
 //
 //     EXAMPLE...
 
-const salesData = [
+// const salesData = [
+//     {
+//         month: 'January',
+//         totalItemsSold: 0
+//     },
+//     {
+//         month: 'February',
+//         totalItemsSold: 5
+//     },
+//     {
+//         month: 'March',
+//         totalItemsSold: 2
+//     },
+//     {
+//         month: 'April',
+//         totalItemsSold: 10
+//     },
+//     {
+//         month: 'May',
+//         totalItemsSold: 30
+//     }
+// ];
+
+// returnAvgSales(salesData) // returns 9.4
+
+// function returnAvgSales() {
+//
+//     if (salesData.length === 0) return 0;
+//     if (salesData.length === 1) return salesData[0].totalItemsSold;
+//
+//     let total = 0
+//     salesData.forEach(salesDataObj => {
+//         total += salesDataObj.totalItemsSold;
+//     })
+//     return total / salesData.length;
+//
+// }
+//
+// console.log(returnAvgSales(salesData))
+
+
+
+//
+// ================================= WARM UP
+//
+// Create a function, returnAdmins, that takes in an array of user objects
+// and returns an array of only the admin user objects. Assume the array
+// has at least one user object and all elements have an isAdmin property.
+//
+//     Example:
+
+
+// const users = [
+//
+//     {
+//         username: 'fred123',
+//         password: 'letmein',
+//         email: 'fred123@email.com',
+//         isAdmin: true
+//     },
+//     {
+//         username: 'cindy123',
+//         password: 'hello123',
+//         email: 'cindy123@email.com',
+//         isAdmin: false
+//     },
+//     {
+//         username: 'kathy123',
+//         password: 'letmein',
+//         email: 'kathy123@email.com',
+//         isAdmin: true
+//     },
+//     {
+//         username: 'kyle123',
+//         password: 'letmein',
+//         email: 'kyle123@email.com',
+//         isAdmin: false
+//     }
+// ]
+
+
+// function returnAdmins(users) {
+//     const admins = users.filter(users => users.isAdmin);
+//     return admins;
+// }
+// const adminUsers = returnAdmins(users);
+// console.log(adminUsers)
+/*
+
+returnAdmins(users) returns...
+
+[
+
     {
-        month: 'January',
-        totalItemsSold: 0
+        username: 'fred123',
+        password: 'letmein',
+        email: 'fred123@email.com',
+        isAdmin: true
     },
     {
-        month: 'February',
-        totalItemsSold: 5
-    },
-    {
-        month: 'March',
-        totalItemsSold: 2
-    },
-    {
-        month: 'April',
-        totalItemsSold: 10
-    },
-    {
-        month: 'May',
-        totalItemsSold: 30
+        username: 'kathy123',
+        password: 'letmein',
+        email: 'kathy123@email.com',
+        isAdmin: true
     }
-];
+]
 
-returnAvgSales(salesData) // returns 9.4
+*/
 
-function returnAvgSales() {
 
-    if (salesData.length === 0) return 0;
-    if (salesData.length === 1) return salesData[0].totalItemsSold;
 
-    let total = 0
-    salesData.forEach(salesDataObj => {
-        total += salesDataObj.totalItemsSold;
-    })
-    return total / salesData.length;
+//
+// const users = [
+//
+//     {
+//         username: 'fred123',
+//         password: 'letmein',
+//         email: 'fred123@email.com',
+//         isAdmin: true
+//     },
+//     {
+//         username: 'cindy123',
+//         password: 'hello123',
+//         email: 'cindy123@email.com',
+//         isAdmin: false
+//     },
+//     {
+//         username: 'kathy123',
+//         password: 'letmein',
+//         email: 'kathy123@email.com',
+//         isAdmin: true
+//     },
+//     {
+//         username: 'kyle123',
+//         password: 'letmein',
+//         email: 'kyle123@email.com',
+//         isAdmin: false
+//     }
+// ]
+//
+//
+//
+//
+//
+// function returnAdmins(users) {
+//     const admins = [];
+//     for (let i = 0; i < users.length; i += 1){
+//         if (users[i].isAdmin === true){
+//             admins.push(users[i].username);
+//         }
+//     }
+//     return admins
+// }
+//
+// console.log(returnAdmins(users))
 
-}
 
-console.log(returnAvgSales(salesData))
+
 
 
 

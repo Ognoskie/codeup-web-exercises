@@ -478,10 +478,42 @@
 
 
 
+///////////////////Bills loops//////////////////////////////////
+
+ // Use the following array for these practice exercises
+ const cars = ["Charger", "Equinox", "Malibu", "Soul", "Fusion", "Focus", "Avenger", "Town and Country"];
+
+ //Using the cars array, log the car with the fewest letters in it's name
+
+ //log the car with the most letters
+
+ //Use a loop to output the following text in the console:
+ //1
+ //1 2
+ //1 2 3
+ //1 2 3 4
+ //1 2 3 4 5
+ //1 2 3 4
+ //1 2 3
+ //1 2
+ //1
 
 
 
 
+const fewestLetters = array => {
+ const sortedArray = [...array];
+ return sortedArray.sort((a, b) => a.length - b.length);
+}
+
+ console.log(fewestLetters(cars));
+
+const mostLetters = array => {
+ const sortedArray = [...array];
+ return sortedArray.sort((a, b) => b.length - a.length);
+}
+
+ console.log(mostLetters(cars));
 
 
 
