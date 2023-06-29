@@ -511,7 +511,9 @@ function pyramid() {
 
  console.log(pyramid());
 
+for (let i = 1; i <= 50; ++i){
 
+}
 
 
 
@@ -534,3 +536,14 @@ const mostLetters = array => {
 
 
 
+
+
+
+//////////////////loops session with steve/////////////////////
+
+
+// make a loop that goes through 50 times
+
+ for (let i = 0; i < 50; ++i){
+
+ }
