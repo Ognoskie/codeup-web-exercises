@@ -459,7 +459,39 @@ returnAdmins(users) returns...
 
 
 
+// ================================= WARM UP
+//
+//
+// Write a function, returnLargestStudentCount, that takes in an array of classes returns the number of students in the largest class.
+// Assume at least one class object will be present in the input array with students property set to a valid positive integer.
 
+    let classes = [
+    {class: "6th grade history", students: 18},
+    {class: "7th grade history", students: 20},
+    {class: "8th grade history", students: 22},
+    {class: "4th grade history", students: 30},
+    {class: "10th grade history", students: 25}
+];
+
+
+    // function returnLargestStudentCount(array, student) {
+    //     for (let student of array) {
+    //         if (student === array) {
+    //             return student
+    //         }
+    //     }
+    //     return "Not largest class"
+    // }
+
+    let highestStudentCount = 0;
+
+    for (let i = 0; i < classes.length; ++i) {
+        if (highestStudentCount < classes[i].students) {
+            highestStudentCount = classes[i].students;
+        }
+    }
+console.log(highestStudentCount);
+// console.log(returnLargestStudentCount(classes));// returns 30
 
 
 
