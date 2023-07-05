@@ -24,4 +24,4 @@ function createArray(number){
     return newArray;
 }
 
-console.log(createArray())
+console.log(createArray(7,8,5))
