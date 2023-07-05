@@ -44,6 +44,11 @@ h1.addEventListener("mouseover", () => {
     h1.style.fontSize = "10em";
 });
 
+const div = document.getElementById('Id')[0];
+
+div.addEventListener(() => {
+    div.style.display = "hidden"
+})
 
 
 // When double-clicking the restore text button, make the h1 font size 2em

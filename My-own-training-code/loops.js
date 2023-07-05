@@ -1,6 +1,4 @@
- "use strict";
-
-    // ================================ WHILE LOOP
+// ================================ WHILE LOOP
 
     /*
     While loop syntax:
@@ -561,14 +559,52 @@
  // this will loop the numbers 1 through 9 until i = < (less than) 10
 
  ///////////////////while loop with an array///////////////////////////////
+ //
+ // let nameArray = ["tim, mike, john, batman, jonas, vivienne, richard"];
+ // let notFound = true;
+ //
+ // function findName() {
+ //  while(notFound && nameArray.length > 0) {
+ //   if (nameArray[0] === "vivienne") {
+ //    console.log("Found her!!!")
+ //    notFound = false;
+ //   } else {
+ //    nameArray.shift();
+ //   }
+ //  }
+ // }
+ // findName();
 
- let someArray = ["tim, mike, john, batman, jonas, vivienne, richard"];
- let notFound = true;
+ let nr1 = 0;
+ let nr2 = 1;
+ let temp;
 
- while(notFound && someArray.length > 0) {
-  if (someArray[0] === "vivienne"){
-   console.log("I love her!!!")
-   notFound = false;
-  }
-  someArray.shift();
+ fibonacciArray = [];
+ while (fibonacciArray.length < 25) {
+  fibonacciArray.push(nr1);
+  temp = nr1 + nr2;
+  nr1 = nr2;
+  nr2 = temp;
  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
