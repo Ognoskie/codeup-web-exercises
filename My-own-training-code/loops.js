@@ -445,9 +445,9 @@
 
 //  1. Print numbers from 1 to 10 using a for loop.
 
- for (let i = 1; i <= 10; i++) {
-  console.log(i);
- }
+ // for (let i = 1; i <= 10; i++) {
+ //  console.log(i);
+ // }
 
 
 
@@ -481,7 +481,7 @@
 ///////////////////Bills loops//////////////////////////////////
 
  // Use the following array for these practice exercises
- const cars = ["Charger", "Equinox", "Malibu", "Soul", "Fusion", "Focus", "Avenger", "Town and Country"];
+ // const cars = ["Charger", "Equinox", "Malibu", "Soul", "Fusion", "Focus", "Avenger", "Town and Country"];
 
  //Using the cars array, log the car with the fewest letters in it's name
 
@@ -499,38 +499,38 @@
  //1
 
 
-function pyramid() {
- for (let i = 1; i <= 5; ++i){
-  let levelPyramid = '';
-  for (let j = 5; j <= 1; --j) {
-  return  levelPyramid = levelPyramid = i;
-  }
-  console.log(levelPyramid);
- }
-}
+// function pyramid() {
+//  for (let i = 1; i <= 5; ++i){
+//   let levelPyramid = '';
+//   for (let j = 5; j <= 1; --j) {
+//   return  levelPyramid = levelPyramid = i;
+//   }
+//   console.log(levelPyramid);
+//  }
+// }
+//
+//  console.log(pyramid());
+//
+// for (let i = 1; i <= 50; ++i){
+//
+// }
 
- console.log(pyramid());
-
-for (let i = 1; i <= 50; ++i){
-
-}
 
 
-
-const fewestLetters = array => {
- const sortedArray = [...array];
- return sortedArray.sort((a, b) => a.length - b.length);
-}
-
- console.log(fewestLetters(cars));
-
-const mostLetters = array => {
- const sortedArray = [...array];
- return sortedArray.sort((a, b) => b.length - a.length);
-}
-
- console.log(mostLetters(cars));
-
+// const fewestLetters = array => {
+//  const sortedArray = [...array];
+//  return sortedArray.sort((a, b) => a.length - b.length);
+// }
+//
+//  console.log(fewestLetters(cars));
+//
+// const mostLetters = array => {
+//  const sortedArray = [...array];
+//  return sortedArray.sort((a, b) => b.length - a.length);
+// }
+//
+//  console.log(mostLetters(cars));
+//
 
 
 
@@ -543,7 +543,32 @@ const mostLetters = array => {
 
 
 // make a loop that goes through 50 times
+//
+//  for (let i = 0; i < 50; ++i){
+//
+//  }
 
- for (let i = 0; i < 50; ++i){
+ //////////////////////////////////JavaScript book Examples/////////////////////////////
 
+ // While loop
+
+ // let i = 0
+ // while (i < 10){
+ //  console.log(i);
+ //  i++;
+ // }
+
+ // this will loop the numbers 1 through 9 until i = < (less than) 10
+
+ ///////////////////while loop with an array///////////////////////////////
+
+ let someArray = ["tim, mike, john, batman, jonas, vivienne, richard"];
+ let notFound = true;
+
+ while(notFound && someArray.length > 0) {
+  if (someArray[0] === "vivienne"){
+   console.log("I love her!!!")
+   notFound = false;
+  }
+  someArray.shift();
  }
