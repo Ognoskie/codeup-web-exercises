@@ -495,6 +495,60 @@ returnAdmins(users) returns...
 // console.log(highestStudentCount);
 // console.log(returnLargestStudentCount(classes));// returns 30
 
+// 1. Create a function that prints 1 to 100.
+//
+//function printOneHundred() {
+//     for (let i = 0; i <= 100; i++){
+//         console.log(i)
+//     }
+// }
+// printOneHundred();
+
+// 2. Create a function, fizzBuzz, that prints out all numbers from 1 to 100 but instead of printing
+// numbers that are evenly divisible by 3, print 'fizz' and any numbers evenly divisible
+// by 5, print 'buzz'. For any numbers that are evenly divisible by 3 AND 5, print 'fizzbuzz'.
+
+
+
+    /*
+    fizzBuzz() // prints...
+
+    1
+    2
+    'fizz'
+    4
+    'buzz'
+    'fizz'
+    7
+    8
+    'fizz'
+    'buzz'
+    11
+    'fizz'
+    13
+    14
+    'fizzbuzz'
+    etc...
+
+    */
+// this code was fun
+function fizzBuzz() {
+    for (let i = 1; i <= 100; i++){
+        if (i % 3 === 0 && i % 5 === 0){
+            console.log("fizzbuzz");
+        } else if (i % 5 === 0){
+            console.log("buzz");
+        }else if (i % 3 === 0){
+            console.log("fizz")
+        }else{
+            console.log(i)
+        }
+    }
+}
+fizzBuzz();
+
+
+
 
 
 
