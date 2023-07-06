@@ -30,6 +30,12 @@
 
 
 /////////////////////////////////////js book while loop//////////////////////////////////////////////////
+
+// while (condition) {
+//  code that gets executed as long as the condition is true
+// }
+
+
 // let nr1 = 0;
 // let nr2 = 1;
 // let temp;
@@ -67,19 +73,66 @@
 //
 // console.log(getRandom());
 
-const max = 25;
-const ranNumber = Math.floor(Math.random() * max) + 1;
-// console.log(ranNumber)
-let correct = false;
-while (!correct) {
-    let guess = prompt("Guess a number 1 - " + max);
-    guess = Number(guess);
-    if (guess === ranNumber) {
-        correct = true;
-        console.log("You got it " + ranNumber);
-    } else if (guess > ranNumber) {
-        console.log("Too high");
-    }else{
-        console.log("Too low");
-    }
-}
+// const max = 25;
+// const ranNumber = Math.floor(Math.random() * max) + 1;
+// // console.log(ranNumber)
+// let correct = false;
+// while (!correct) {
+//     let guess = prompt("Guess a number 1 - " + max);
+//     guess = Number(guess);
+//     if (guess === ranNumber) {
+//         correct = true;
+//         console.log("You got it " + ranNumber);
+//     } else if (guess > ranNumber) {
+//         console.log("Too high");
+//     }else{
+//         console.log("Too low");
+//     }
+// }
+
+//////////////////////////////do while loop example////////////////////////////////////////////
+
+
+// do {
+//     code to be executed if the condition is true
+// } while (condition);
+
+// let number;
+// function enterNum(userInput) {
+//     do {
+//         number = prompt("Please enter a number between 0 and 100: ");
+//     } while (!(number >= 0 && number < 100));
+//     console.log(number);
+// }
+//
+// enterNum();
+
+
+// practice exercise 5.2
+
+
+
+//////////////////////////////////////for loop example/////////////////////////////////////////////
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
