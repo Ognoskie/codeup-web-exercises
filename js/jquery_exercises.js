@@ -51,9 +51,9 @@ $('li').css('font-size', '20px')
     $('h1, p, li').css('background-color', '#FFFF00');
 
 
+// alerts elements on page
+alert($('#link-list').html());
 
-$('#title').html()
-    alert("Ive loaded up!!!");
 
 
 
