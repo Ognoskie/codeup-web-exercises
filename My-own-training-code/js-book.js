@@ -110,29 +110,60 @@
 
 // practice exercise 5.2
 
+// let counter = 0;
+// let step;
+// do {
+//
+// } while ()
 
-
-//////////////////////////////////////for loop example/////////////////////////////////////////////
-
-
-
-
-
-
-
+// prototype method
 
 
 
 
+// class person {
+//     constructor(firstname, lastname) {
+//         this.firstname = firstname;
+//         this.lastname = lastname;
+//     }
+//     greet() {
+//         console.log("Hi, there!");
+//     }
+//
+// }
+//
+// person.prototype.introduce = function () {
+//     console.log("Hi, Im", this.firstname, this.lastname);
+// };
+//
+// person.prototype.favoriteColor = "green";
+//
+// let p = new person("Maria", "Saga");
+// console.log(p.favoriteColor);
+// p.introduce();
 
+// for loop 100 items in an array and make an array out of it
 
+// let arr = [];
+// for (let i = 0; i < 100; i++) {
+//     arr.push(i);
+// }
+// console.log(arr)
 
+// only positive now
 
+// let arr = []
+// for (let i = 0; i < 100; i = i + 2) {
+//     arr.push(i)
+// }
+// console.log(arr)
 
+//////////////////////////////////////// practice exercise 5.3////////////////////////////////////////
 
-
-
-
-
-
-
+let myWork = []
+for (let i = 1; i <= 10; i++) {
+    if (2 % 1 === 0) {
+        console.log("flamingos")
+    }
+}
+console.log(myWork)
