@@ -160,10 +160,135 @@
 
 //////////////////////////////////////// practice exercise 5.3////////////////////////////////////////
 
-let myWork = []
-for (let i = 1; i <= 10; i++) {
-    if (2 % 1 === 0) {
-        console.log("flamingos")
-    }
-}
-console.log(myWork)
+// let myWork = []
+// for (let i = 1; i <= 10; i++) {
+//     if (2 % 1 === 0) {
+//         console.log("flamingos")
+//     }
+// }
+// console.log(myWork)
+
+
+
+
+
+////////////////////////////////////////Nested loops///////////////////////////////////////////////
+
+
+
+// let arrOfArrays = [];
+// for (let i = 0; i < 3; i++) {
+//     arrOfArrays.push([ask someone why if I put "i" in this why it adds another 0 index to the array]);
+//     for (let j = 0; j < 7; j++) {
+//         arrOfArrays[i].push(j);
+//     }
+// }
+// console.log(arrOfArrays);
+
+
+
+
+
+
+
+
+// let i = 0;
+// while (i <= 10) {
+//     console.log(i);
+//     i++;
+// }
+// console.log(i)
+//
+// // for (let i = 0; i <= 10; i++){
+// //     console.log(i)
+// // }
+//
+// for ( i = 0; i <= 10; i++){
+//     console.log(i);
+// }
+
+
+// console.log(10 % 3);
+//
+//
+// console.log(!!true)
+//
+// console.log(parseInt("1") + 2
+//
+// )
+
+// let array = ['John', 'Paul', 'George', 'Ringo', 'Santana'];
+//
+//
+// console.log(array[2], "answer 1");
+//
+//
+// console.log(array[array.length - 2], "answer 2");
+//
+//
+// console.log(array[array.length - 3], "answer 3");
+//
+//
+// console.log(array[2], "answer 4");
+//
+// console.log(array[array.length - 3], "answer 4");
+
+
+// let array = ['John', 'Paul', 'George', 'Ringo'];
+//
+//
+// array.splice(array.indexOf('Ringo'), 0, 'Yoko');
+//
+// console.log(array)
+
+
+//
+// let array = ['John', 'Paul', 'George', 'Ringo', 'Santana'];
+//
+// console.log(array.split());
+
+
+//
+// band.shred = function() {
+//     console.log('RAAAAAAAAAA!!!!');
+// }
+//
+// band.shred();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
