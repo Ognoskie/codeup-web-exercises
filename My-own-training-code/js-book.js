@@ -188,12 +188,18 @@ console.table(arrOfArrays);
 
 
 
-
-
+/////////////////////////////////////////////////Nested loops into a table in console log exercise walkthrough/////////////
+// create an empty array called "myTable" to hold your data
 let myTable = [];
+// set variable values for the number of rows = y and cols = x
 const rows = 4;
 const cols = 7;
+// set up a counter variable with an initial value of 0. The counter will be used to set the content and count the values of the cells within the table.
 let counter = 0;
+// create a loop with conditions to set the number of iterations to construct each row of the table
+// within the loop make a temporary array (tempTable) to hold the row of data.
+// the columns will be nested within the rows, generating each cell needed for the column
+
 for (let y = 0; y < rows; y++) {
     let tempTable = [];
     for (let x = 0; x < cols; x++){
