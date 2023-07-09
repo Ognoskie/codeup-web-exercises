@@ -202,6 +202,8 @@ let counter = 0;
 
 for (let y = 0; y < rows; y++) {
     let tempTable = [];
+    // nest a second loop within the first to count the columns. columns are run within the row loop so that we have a uniform number of columns within the table.
+    // increment the main counter each iteration of the inner loop, so that we track a master counter of each one of the cells and how many cells are created.
     for (let x = 0; x < cols; x++){
         counter++;
         tempTable.push(counter);
