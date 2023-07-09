@@ -212,7 +212,7 @@ for (let y = 0; y < rows; y++) {
     // push the temporary array to the main table. as each iteration builds a new row of array items, this will continue to build the main table in the array.
     myTable.push(tempTable);
 }
-// out put into the console with console.table(myTable). this will show
+// out put into the console with console.table(myTable). this will show you a visual representation of the table structure.
 console.table(myTable);
 
 
