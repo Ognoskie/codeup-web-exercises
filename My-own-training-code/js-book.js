@@ -206,10 +206,13 @@ for (let y = 0; y < rows; y++) {
     // increment the main counter each iteration of the inner loop, so that we track a master counter of each one of the cells and how many cells are created.
     for (let x = 0; x < cols; x++){
         counter++;
+        // push the counter values to the temporary array, tempTable. since the array is a nested array representing a table, the values of the counter can also be used to illustrate the cell values next to each other in the table. Although these are separate arrays representing new rows, the values of the counter will help illustrate the overall sequence of cells in the final table.
         tempTable.push(counter);
     }
+    // push the temporary array to the main table. as each iteration builds a new row of array items, this will continue to build the main table in the array.
     myTable.push(tempTable);
 }
+// out put into the console with console.table(myTable). this will show
 console.table(myTable);
 
 
