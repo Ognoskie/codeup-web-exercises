@@ -249,6 +249,9 @@ for (let i = 0; i < names.length; i++) {
 }
 console.log(names)
 
+// this adds hello to all the objects in the array above
+
+console.log(2+"2"-1);
 
 
 
