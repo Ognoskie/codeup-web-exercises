@@ -240,9 +240,14 @@ console.table(myTable);
 // the index is always one smaller than the length.
 // which is why we loop over the values of the array by increasing the length.
 
+// we are simply printing the arrays.
+// but we can be changing the values of the array in a loop, for example, like below:
 
-
-
+let names = ["Chantal", "John", "Maxime", "Bobbi", "Jair"];
+for (let i = 0; i < names.length; i++) {
+    names[i] = "hello " + names[i];
+}
+console.log(names)
 
 
 
