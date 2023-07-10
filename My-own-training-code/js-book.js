@@ -272,24 +272,45 @@
 
 //////////// practice exercise 5.5/////////////
 
+// create a grid array variable
 const grid = [];
+
+// set a value of 64 for the number of cells
 const cells = 64;
+
+// set the counter to 0
 let counter = 0;
+
+//create a global variable to be used for the row array.
 let row;
+
+// create a loop that will iterate up to the number of cells you want in the array, plus one to include the zero value.
+// in this example we would use 64 + 1 which is "x < cells + 1"
 for (let x = 0; x < cells + 1; x++) {
+
+    // add an outer if statement, which uses modulo to check if the main counter is divisible by 8 or whatever number of columns you want.
     if (counter % 8 == 0) {
+
+        // inside the preceding if statement, add another if statement to check if the row is undefined.
+        // this will indicate whether it is the first run or whether the row is complete.
+        // if the row has been defined, then add the row to the main grid array.
         if (row !== undefined) {
             grid.push(row);
         }
+
+        // to finish off the outer if statement, if the counter is divisible by 8, clear the row array - it has already been added to the grid by the inner if statement.
         row = [];
     }
+
+    // at the end of the for loop, increment of the main counter by 1
     counter++;
+
+
     let temp = counter;
     row.push(temp);
 
 }
 console.table(grid);
-
 
 
 
