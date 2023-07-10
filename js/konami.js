@@ -3,7 +3,7 @@ jQuery === $
 $(() => {
 
     $(document).ready(function(event){
-        const konamiCode = ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight', 'b', 'a', 'enter'];
+        const konamiCode = ['arrowup', 'arrowup', 'arrowdown', 'arrowdown', 'arrowleft', 'arrowright', 'arrowleft', 'arrowright', 'b', 'a', 'enter'];
 
         let konamiIndex = 0;
 
@@ -26,9 +26,6 @@ $(() => {
 
 
 
-    // $(document).on('keyup', (e) => {
-    //     console.log(e.key);
-    // });
 
 
 
