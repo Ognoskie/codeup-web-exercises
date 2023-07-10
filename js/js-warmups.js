@@ -582,12 +582,13 @@ function getTopRunners () {
 
         if (average < 50) {
             return runners.splice(i);
+            continue;
         }
     }
 
 }
 
-console.log(getTopRunners());
+console.log(getTopRunners(runners));
 
 
 

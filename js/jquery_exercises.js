@@ -44,27 +44,82 @@ $(() => {
 // //select everything
 //     $('*').css('outline', '1px solid lightblue').css('font-weight', 'bold');
 
-$('.codeup').css('border', '1px solid red');
+// $('.codeup').css('border', '1px solid red');
+//
+// $('li').css('font-size', '20px')
+//
+//     $('h1, p, li').css('background-color', '#FFFF00');
+//
+//
+// // alerts elements on page
+// alert($('#link-list').html());
 
-$('li').css('font-size', '20px')
+//
+// $('h2').on('click', function () {
+//     // changes all h2
+//
+//     // changes only the specific h2
+//     $(this).css('text-decoration', 'underline');
+// })
+//     .on('dblclick', function () {
+//         $(this).css('text-decoration', 'none');
+//     })
+//
+//
+// // or
+//
+//     function underlineThis() {
+//         $(this).css('text-decoration', 'underline');
+//     }
+//
+//
+//     function noUnderlineThis() {
+//         $(this).css('text-decoration', 'none');
+//     }
+//
+//     $('h2')
+//         .on('click', underlineThis)
+//         .on('dblclick', noUnderlineThis);
+//
+//
+// function hideUnorderedList() {
+//     $('ul').css('display', 'none');
+// }
+// $('h1')
+//     .on('click', hideUnorderedList);
 
-    $('h1, p, li').css('background-color', '#FFFF00');
+
+    // exercise 2
+function backgroundColor() {
+    $(this).css('background-color', 'blue')
+}
+$('h1')
+    .on('click', backgroundColor);
+
+// exercise 3
+
+    function pChangeFont() {
+        $(this).css('font-size', '18px')
+    }
+    $('p')
+        .on('dblclick', pChangeFont);
+
+    // exercise 3
+
+    function liRedHover() {
+        $(this).css('color', 'red')
+    }
+    $('li')
+        .on('mouseover', liRedHover)
 
 
-// alerts elements on page
-alert($('#link-list').html());
 
 
-
-
-
-
-
-
-
-
-
-
+    function liBlackHover() {
+        $(this).css('color', 'black')
+    }
+    $('li')
+        .on('mouseleave', liBlackHover)
 
 
 
