@@ -229,12 +229,14 @@ console.table(myTable);
 //     code to be exectued
 // }
 
-let names = ["john", "bobo", "lil jimmy", "sim sim", "max"];
-for (let i = 0; i < names.length; i++) {
-    console.table(names[i]);
-}
+// let names = ["john", "bobo", "lil jimmy", "sim sim", "max"];
+// for (let i = 0; i < names.length; i++) {
+//     console.table(names[i]);
+// }
+//
 
-
+// the length property is used to determine the maximum value of our index.
+// the index of an array starts counting at 0, but the length property does not.
 
 
 
