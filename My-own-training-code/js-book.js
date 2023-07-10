@@ -237,6 +237,9 @@ console.table(myTable);
 
 // the length property is used to determine the maximum value of our index.
 // the index of an array starts counting at 0, but the length property does not.
+// the index is always one smaller than the length.
+// which is why we loop over the values of the array by increasing the length.
+
 
 
 
