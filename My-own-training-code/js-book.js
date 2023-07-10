@@ -222,8 +222,12 @@ console.table(myTable);
 
 ///////////////////////////////////////////LOOPS AND ARRAYS//////////////////////////////////////////////////////////////
 
+// example of how arrays and loops are made
 
-
+// let arr = [some array];
+// for (initialize variable; variable smaller than arr.length; statement) {
+//     code to be exectued
+// }
 
 
 
