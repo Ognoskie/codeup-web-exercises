@@ -229,7 +229,10 @@ console.table(myTable);
 //     code to be exectued
 // }
 
-
+let names = ["john", "bobo", "lil jimmy", "sim sim", "max"];
+for (let i = 0; i < names.length; i++) {
+    console.table(names[i]);
+}
 
 
 
