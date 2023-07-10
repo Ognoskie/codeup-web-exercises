@@ -243,21 +243,28 @@ console.table(myTable);
 // we are simply printing the arrays.
 // but we can be changing the values of the array in a loop, for example, like below:
 
-let names = ["Chantal", "John", "Maxime", "Bobbi", "Jair"];
-for (let i = 0; i < names.length; i++) {
-    names[i] = "hello " + names[i];
-}
-console.log(names)
+// let names = ["Chantal", "John", "Maxime", "Bobbi", "Jair"];
+// for (let i = 0; i < names.length; i++) {
+//     names[i] = "hello " + names[i];
+// }
+// console.log(names)
 
 // this adds hello to all the objects in the array above
 
-console.log(2+"2"-1);
+// console.log(2+"2"-1);
+
+// Data can be modified by value, or even filtered, like below:
 
 
-
-
-
-
+let names = ["Chantal", "John", "Maxime", "Bobbi", "Jair"];
+for (let i = 0; i < names.length; i++) {
+    if (names[i].startsWith("M")) {
+        delete names[i];
+        continue;
+    }
+    names[i] = "hello " + names[i];
+}
+console.log(names)
 
 
 
