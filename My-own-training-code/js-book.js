@@ -176,44 +176,48 @@
 
 
 
-let arrOfArrays = [];
-for (let i = 0; i < 3; i++) {
-    arrOfArrays.push([]);
-    for (let j = 0; j < 7; j++) {
-        arrOfArrays[i].push(j);
-    }
-}
-console.table(arrOfArrays);
+// let arrOfArrays = [];
+// for (let i = 0; i < 3; i++) {
+//     arrOfArrays.push([]);
+//     for (let j = 0; j < 7; j++) {
+//         arrOfArrays[i].push(j);
+//     }
+// }
+// console.table(arrOfArrays);
 
 
 
 
 /////////////////////////////////////////////////Nested loops into a table in console log exercise walkthrough/////////////
 // create an empty array called "myTable" to hold your data
-let myTable = [];
-// set variable values for the number of rows = y and cols = x
-const rows = 4;
-const cols = 7;
-// set up a counter variable with an initial value of 0. The counter will be used to set the content and count the values of the cells within the table.
-let counter = 0;
-// create a loop with conditions to set the number of iterations to construct each row of the table
-// within the loop make a temporary array (tempTable) to hold the row of data.
-// the columns will be nested within the rows, generating each cell needed for the column
+// let myTable = [];
+//
+// // set variable values for the number of rows = y and cols = x
+// const rows = 4;
+// const cols = 7;
+//
+// // set up a counter variable with an initial value of 0. The counter will be used to set the content and count the values of the cells within the table.
+// let counter = 0;
 
-for (let y = 0; y < rows; y++) {
-    let tempTable = [];
-    // nest a second loop within the first to count the columns. columns are run within the row loop so that we have a uniform number of columns within the table.
-    // increment the main counter each iteration of the inner loop, so that we track a master counter of each one of the cells and how many cells are created.
-    for (let x = 0; x < cols; x++){
-        counter++;
-        // push the counter values to the temporary array, tempTable. since the array is a nested array representing a table, the values of the counter can also be used to illustrate the cell values next to each other in the table. Although these are separate arrays representing new rows, the values of the counter will help illustrate the overall sequence of cells in the final table.
-        tempTable.push(counter);
-    }
-    // push the temporary array to the main table. as each iteration builds a new row of array items, this will continue to build the main table in the array.
-    myTable.push(tempTable);
-}
-// out put into the console with console.table(myTable). this will show you a visual representation of the table structure.
-console.table(myTable);
+// // create a loop with conditions to set the number of iterations to construct each row of the table
+// // within the loop make a temporary array (tempTable) to hold the row of data.
+// // the columns will be nested within the rows, generating each cell needed for the column
+// for (let y = 0; y < rows; y++) {
+//     let tempTable = [];
+//
+//     // nest a second loop within the first to count the columns. columns are run within the row loop so that we have a uniform number of columns within the table.
+//     // increment the main counter each iteration of the inner loop, so that we track a master counter of each one of the cells and how many cells are created.
+//     for (let x = 0; x < cols; x++){
+//         counter++;
+//
+//         // push the counter values to the temporary array, tempTable. since the array is a nested array representing a table, the values of the counter can also be used to illustrate the cell values next to each other in the table. Although these are separate arrays representing new rows, the values of the counter will help illustrate the overall sequence of cells in the final table.
+//         tempTable.push(counter);
+//     }
+//     // push the temporary array to the main table. as each iteration builds a new row of array items, this will continue to build the main table in the array.
+//     myTable.push(tempTable);
+// }
+// // out put into the console with console.table(myTable). this will show you a visual representation of the table structure.
+// console.table(myTable);
 
 
 
@@ -256,16 +260,35 @@ console.table(myTable);
 // Data can be modified by value, or even filtered, like below:
 
 
-let names = ["Chantal", "John", "Maxime", "Bobbi", "Jair"];
-for (let i = 0; i < names.length; i++) {
-    if (names[i].startsWith("M")) {
-        delete names[i];
-        continue;
-    }
-    names[i] = "hello " + names[i];
-}
-console.log(names)
+// let names = ["Chantal", "John", "Maxime", "Bobbi", "Jair"];
+// for (let i = 0; i < names.length; i++) {
+//     if (names[i].startsWith("M")) {
+//         delete names[i];
+//         continue;
+//     }
+//     names[i] = "hello " + names[i];
+// }
+// console.log(names)
 
+//////////// practice exercise 5.5/////////////
+
+const grid = [];
+const cells = 64;
+let counter = 0;
+let row;
+for (let x = 0; x < cells + 1; x++) {
+    if (counter % 8 == 0) {
+        if (row !== undefined) {
+            grid.push(row);
+        }
+        row = [];
+    }
+    counter++;
+    let temp = counter;
+    row.push(temp);
+
+}
+console.table(grid);
 
 
 
