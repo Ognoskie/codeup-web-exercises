@@ -562,7 +562,7 @@ returnAdmins(users) returns...
 // that takes in an array of numbers and returns the average
 
 
-// Input:
+// // Input:
 const runners = [
     { name: "Alice", age: 25, lapTimes: [50.5, 45.2, 48.8, 47.1],
 
@@ -575,25 +575,27 @@ const runners = [
 
 
 
-function getTopRunners () {
+function getTopRunners() {
+
+    // declare a variable to store every top runner (array)
+let topRunners = [];
     for (let i = 0; i < runners.length; i++) {
         const sum = runners[i].lapTimes.reduce((acc, current) => acc + current, 0);
-        const average = sum / runners.length;
+        const runnersAverage = sum / runners[i].lapTimes.length;
 
-        if (average < 50) {
-            return runners.splice(i);
-            continue;
+        if (runnersAverage <= 50) {
+            topRunners.push(runners[i])
+            // dont return
+
+            // push the current runner to the top runners array
         }
     }
+    // return the top runners array
+return topRunners
 
 }
 
-console.log(getTopRunners(runners));
-
-
-
-
-
+console.log(getTopRunners())
 
 
 // Expected Output:
@@ -625,7 +627,7 @@ console.log(getTopRunners(runners));
 
 
 
-
+// get top runner
 
 
 
