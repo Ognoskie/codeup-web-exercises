@@ -14,6 +14,7 @@ $(() => {
                 konamiIndex++;
                 if (konamiIndex === konamiCode.length) {
                     alert("You gained 30 lives!");
+                    $('#audio').html('<audio autoplay loop><source src="../audio/cyberpunk.mp3" type="audio/mpeg"></audio>');
                     konamiIndex = 0;
                 }
             } else {
@@ -23,6 +24,7 @@ $(() => {
         });
 
     });
+
 
 
 
