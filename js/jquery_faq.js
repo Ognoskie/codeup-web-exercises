@@ -35,7 +35,12 @@ document.querySelector('button').addEventListener('click', toggle);
 
 
 
-
+const ddElements = document.querySelectorAll('dd');
+toggleButton.addEventListener('click', () => {
+    ddElements.forEach((ddElements) => {
+        ddElements.classList.toggle('invisible')
+    })
+})
 
 
 
