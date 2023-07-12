@@ -39,3 +39,10 @@
 // "xxxxYxYx" and w = 5   -->  3
 // "xxxxxYxYx" and w = 2  -->  5
 
+const waterBombNeeded = (str, w) => {
+    let sections = str.split("Y");
+    let count = 0;
+    for (let i = 0; i < sections.length; i++) {
+
+    }
+}
