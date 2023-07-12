@@ -35,29 +35,44 @@ document.querySelector('button').addEventListener('click', toggle);
 
 
 
-const ddElements = document.querySelectorAll('dd');
-toggleButton.addEventListener('click', () => {
-    ddElements.forEach((ddElements) => {
-        ddElements.classList.toggle('invisible')
+// const ddElements = document.querySelectorAll('dd');
+// toggleButton.addEventListener('click', () => {
+//     ddElements.forEach((ddElements) => {
+//         ddElements.classList.toggle('invisible')
+//     })
+// });
+
+
+    // Create a button that, when clicked, makes the last li in each ul have a yellow background.
+    //
+    //     When any h3 is clicked, the lis underneath it should be bolded. Use font-weight: bold to achieve this.
+    //
+    //     When any list item is clicked, first li of the parent ul should have a font color of blue.
+
+
+
+
+
+
+
+    // $('li').on('click', (e) => {
+    //     $(e.target).last().css('background-color', 'yellow')
+    // });
+
+
+    $(".yellow-button").click(function() {
+        $("ul").each(function() {
+            $(this).find("li:last").css("background-color", "yellow");
+        });
+    });
+
+    $('h3').on('click', (e) => {
+        $(e.target).next().css('font-weight', 'bold')
     })
-})
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    $('ul').children().on('click', (e) => {
+        $(e.target).parent().children().first().css('color', 'blue')
+    })
 
 
 
