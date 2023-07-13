@@ -885,20 +885,20 @@ const hogwartsHouses = [
 
 
 
-
-const logHouseInfo = (houses) => {
-    houses.forEach((house) => {
-        console.log(`
-        Hogwarts House: ${house.name}
-        Animal: ${house.animal}
-        Founder: ${house.founder}
-        Common Room: ${house.commonRoom}
-        House Head: ${house.heads[0].firstName} ${house.heads[0].lastName}
-        `)
-    })
-}
-
-logHouseInfo(hogwartsHouses)
+//
+// const logHouseInfo = (houses) => {
+//     houses.forEach((house) => {
+//         console.log(`
+//         Hogwarts House: ${house.name}
+//         Animal: ${house.animal}
+//         Founder: ${house.founder}
+//         Common Room: ${house.commonRoom}
+//         House Head: ${house.heads[0].firstName} ${house.heads[0].lastName}
+//         `)
+//     })
+// }
+//
+// logHouseInfo(hogwartsHouses)
 
 
 

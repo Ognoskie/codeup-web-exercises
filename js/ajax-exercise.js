@@ -20,7 +20,7 @@ $(() => {
     //     Add Twitter Bootstrap to your online store with some custom CSS to make the style your own.
 
 
-    $.ajax('data')
+    $.ajax('data/inventory-data-ajax.json')
         .done((data) => {
             console.log(data);
         })
