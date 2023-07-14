@@ -25,18 +25,22 @@ $.ajax(URL).done(data => {
 
 // TODO: log various parts of the API
 
-// $.ajax(URL).done(data => {
-//     console.log(data);
-//     // TODO: log the city name
-//     // TODO: log the first three-hour forecast block
-//     // TODO: log the humidity for the first three-hour block
-// }).fail(console.error);
+$.ajax(URL).done(data => {
+    console.log(data);
+    // TODO: log the city name
+    console.log(data.city.name)
+    // TODO: log the first three-hour forecast block
+    console.log(data.list[0])
+    // TODO: log the humidity for the first three-hour block
+    console.log(data.list[0].main.humidity
+    )
+}).fail(console.error);
 
 
 // TODO: log the humidity for all days
 
-// $.ajax(getWeatherURL(...ALAMO_COORDINATES))
-//     .done((data) => {
+$.ajax(getWeatherURL(...ALAMO_COORDINATES))
+    .done((data) => {
 //
 //         data.list.forEach((day, index) => {
 //             if (index % 8 === 0) {
@@ -46,22 +50,154 @@ $.ajax(URL).done(data => {
 //
 //         // OR
 //
-//         for (let i = 0; i < data.list.length; i += 8) {
-//             console.log(data.list[i].main.humidity);
-//         }
-//
-//     })
-//     .fail(console.error);
+        for (let i = 0; i < data.list.length; i += 8) {
+            console.log(data.list[i].main.humidity);
+        }
+
+    })
+    .fail(console.error);
 
 
 // TODO: log the min and max temp for each day
 
-// $.ajax(getWeatherURL(...ALAMO_COORDINATES))
-//     .done(data => {
-//         console.log(data);
-//         const minMaxTemps = returnMinMaxTemps(data);
-//         minMaxTemps.forEach(minMaxTemp => {
-//             console.log(minMaxTemp);
-//         });
-//     })
-//     .fail(console.error);
+$.ajax(getWeatherURL(...ALAMO_COORDINATES))
+    .done(data => {
+        console.log(data);
+        const minMaxTemps = returnMinMaxTemps(data);
+        minMaxTemps.forEach(minMaxTemp => {
+            console.log(minMaxTemp);
+        });
+    })
+    .fail(console.error);
+
+////////////////////////////////////////////My code for weather map project////////////////////////////////////
+
+// Practice making API calls to the OpenWeather 5 Day / 3 Hour Forecast API. Log various properties from the response.
+
+// When you are comfortable getting and logging data from the API, read through the instructions of the project at the end of the lesson
+
+// I recommend starting the project by creating a card for today’s forecast for fixed location, then build out the forecast panels for the full five days
+
+// Add a map and connect it to your forecast information
+
+// Finish any remaining functionality for the rubric
+
+// Make it look awesome!
+
+
+
+// Global
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//Functions
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Events
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//Runs when program loads 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
