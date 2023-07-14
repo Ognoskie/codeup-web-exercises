@@ -58,7 +58,8 @@ const map = startMap();
                 .setHTML(`<p>Cover 3</p>`);
             const coverMarker = new mapboxgl.Marker()
                 .setLngLat(cover)
-                .addTo(map)
+                // comment this out so the text doesnt pop up right away
+                // .addTo(map)
                 .setPopup(coverPopup);
             coverPopup.addTo(map);
     }
@@ -75,7 +76,8 @@ const map = startMap();
             .setHTML(`<p>North Italia</p>`);
         const italiaMarker = new mapboxgl.Marker()
             .setLngLat(italia)
-            .addTo(map)
+            // comment this out so the text doesnt pop up right away
+            // .addTo(map)
             .setPopup(italiaPopup);
         italiaPopup.addTo(map)
     }
@@ -91,7 +93,8 @@ const map = startMap();
             .setHTML(`<p>Pappadeaux</p>`);
         const papMarker = new mapboxgl.Marker()
             .setLngLat(pap)
-            .addTo(map)
+            // comment this out so the text doesnt pop up right away
+            // .addTo(map)
             .setPopup(papPopup);
         papPopup.addTo(map)
     }
