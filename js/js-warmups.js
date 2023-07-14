@@ -903,6 +903,99 @@ const hogwartsHouses = [
 
 
 
+// Write a function called removeEvens that takes an array of numbers
+// And removes any even number from the array
+
+// Examples:
+
+// Input: [1, 3, 2, 13, 74, 33]
+// Expected Output: [1, 3, 13, 33]
+//
+// Input: [62, 3, 2, 8, 531, 7]
+// Expected Output: [3, 531, 7]
+
+
+
+// const removeEvens = (numbers) => {
+//     let nums = [];
+//     let oddNums = [];
+//     for (let i = 0; i < numbers.length; i++) {
+//         if (nums[i]% 2 !==0 ) {
+//             oddNums.push(nums)
+//         }
+//     }
+//     return oddNums
+// }
+//
+// console.log(removeEvens([1, 2, 3, 4, 5]));
+
+// my method
+// const removeEvens = (numbers) => {
+//     let oddNums = [];
+//     for (let i = 0; i < numbers.length; i++) {
+//         if (numbers[i] % 2 !== 0) {
+//             oddNums.push(numbers[i]);
+//         }
+//     }
+//     return oddNums;
+// }
+//
+// console.log(removeEvens([1, 2, 3, 4, 5]));
+
+
+// filter method
+// function removeEvens(numbers) {
+//     return numbers.filter(n => n % 2 !== 0);
+// }
+//
+// const oddNumbers = removeEvens([1, 2, 3, 4, 5]);
+// console.log(oddNumbers);
+
+
+
+// walkthrough
+
+function removeEvens(inputArray) {
+    // guard against anything that is NOT an array
+    if (!Array.isArray(inputArray)) {
+        return false;
+    }
+    // declare a new array that will hold odd numbers only
+    const oddNumbers = [];
+    // loop through input Array
+    for (const number of inputArray) {
+        // guard against any item in the array that is not a number
+        if (!isANumber(number)) {
+            return false;
+        }
+        // in the loop, check to see if our item is even or odd
+        if (number % 2 !== 0) {
+            //if odd add to our array
+            oddNumbers.push(number);
+        }
+
+    }
+    // after the loop, return our new array holding the odd numbers
+    return oddNumbers;
+}
+
+console.log(removeEvens([1, 2, 3, 4, 5]))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
