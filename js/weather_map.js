@@ -87,7 +87,9 @@ $.ajax(getWeatherURL(...ALAMO_COORDINATES))
 
 
 // Global
-
+const map = startMap();
+const marker = createMarker();
+const popup = createPopup();
 
 
 
@@ -114,7 +116,31 @@ $.ajax(getWeatherURL(...ALAMO_COORDINATES))
 
 //Functions
 
+function startMap() {
+    mapboxgl.accessToken = MAPBOX_STEVE_TOKEN;
 
+    const mapOptions = {
+        container: 'map',
+        style: 'mapbox://styles/mapbox/streets-v12',
+        zoom: 10,
+        center: [-98.4916, 29.4252],
+    }
+
+    return new mapboxgl.Map(mapOptions);
+}
+
+function createMarker() {
+    return new mapboxgl.Marker()
+    // .setLngLat([-98.4916, 29.4252])
+    // .addTo(map)
+}
+
+
+function createPopup() {
+    return new mapboxgl.Popup()
+    // .setLngLat([-98.4916, 29.4252])
+
+}
 
 
 
@@ -172,7 +198,7 @@ $.ajax(getWeatherURL(...ALAMO_COORDINATES))
 
 
 
-//Runs when program loads 
+//Runs when program loads
 
 
 
