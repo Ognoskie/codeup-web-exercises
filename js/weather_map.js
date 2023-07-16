@@ -201,7 +201,7 @@ $(() => {
 
 //Runs when program loads
 
-
+map.setZoom(3);
 
 
 
