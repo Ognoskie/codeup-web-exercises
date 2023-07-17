@@ -15,8 +15,8 @@ $(() => {
 
 // console.log(getWeatherURL(ALAMO_COORDINATES[0], ALAMO_COORDINATES[1]));
 
-    const URL = getWeatherURL(...ALAMO_COORDINATES);
-    console.log(URL)
+    // const URL = getWeatherURL(...ALAMO_COORDINATES);
+    // console.log(URL)
 
 // TODO: log full response from API
 
