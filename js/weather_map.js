@@ -186,18 +186,13 @@ $(() => {
 
         })
 
-    $(document).on('keydown',function(e) {
-        const searchInput = $('#search-input');
-        if(e.keyCode === 13) {
-            e.preventDefault()
-            performSearch(searchInput.val());
-        }
-    });
-    function performSearch(query) {
-        // Implement your search functionality here
-
-        // Add your desired search logic
-    }
+    // $(document).on('keydown',function(e) {
+    //     const searchInput = $('#search-btn');
+    //     if(e.keyCode === 13) {
+    //         e.preventDefault()
+    //         (searchInput.val());
+    //     }
+    // });
 
 
         function getCurrentCity(lon, lat) {
@@ -209,7 +204,11 @@ $(() => {
     }
 
 
+    $(document).keypress(function(event) {
+        if (event.key === "Enter") {
 
+        }
+    });
 
 // Events
 // Set an event listener
@@ -235,7 +234,6 @@ $(() => {
 // map.setZoom();
     getWeatherInfo(29.4252, -98.4916)
     marker.setPopup(popup);
-
 
 
 

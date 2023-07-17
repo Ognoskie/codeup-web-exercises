@@ -11,4 +11,8 @@ img {
 .cards-weather {
     padding: unset;
     margin: unset;
+    border-radius: 20%;
+}
+.map{
+
 }
