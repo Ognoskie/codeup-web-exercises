@@ -14,15 +14,30 @@
     <title>Weather Map Project</title>
 </head>
 <body>
-<header class="container-fluid">
+<div class="container-fluid">
+    <div class="col">
     <h1>Weather Today!</h1>
-</header>
+
+    </div>
+    <div class=" gap-3">
+        <h1 class="fs-4">Current City</h1>
+        <div id="current-city" class="fs-4"></div>
+    </div>
+</div>
+
+<!--search bar start-->
+<div class="search-div">
+    <input id="search-input"
+           type="search" placeholder="City, State or Zip Code">
+    <button id="search-btn">Search</button>
+</div>
+<!--search bar end-->
 
 <!--Map start-->
 <div id="map" style="height: 40rem; width: 40rem;"></div>
 <!--Map end-->
 <!--Weather cards start-->
-<div class="container d-flex flex-wrap cards-weather">
+<div class="container-fluid d-flex flex-wrap cards-weather">
 <!--    <div class="row">-->
         <div class="col weather-cards d-flex flex-wrap justify-content-evenly py-4">
 

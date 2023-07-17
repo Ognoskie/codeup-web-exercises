@@ -120,6 +120,7 @@ $(() => {
     }
 
 
+
     function createMarker() {
         return new mapboxgl.Marker()
         .setLngLat([-98.4916, 29.4252])
@@ -152,15 +153,67 @@ $(() => {
         }
     }
 
+    async function findAddress() {
+        const coords = map.getCenter();
+        let address = await reverseGeocode(coords, MAPBOX_STEVE_TOKEN)
+        console.log(address);
+        document.querySelector('#search-div').value = `${address}`
+    }
 
 
+
+    $('#search-btn')
+        .click(function () {
+            const userInput = $('#search-input').val();
+            geocode(userInput, MAPBOX_STEVE_TOKEN).then((data) => {
+                console.log("user has searched. the coordinates are", data)
+                const popup = new mapboxgl.Popup()
+                marker
+                    .setLngLat(data)
+                    .setPopup(popup)
+                    .addTo(map);
+                popup.addTo(map);
+
+                map.flyTo({
+                    center: data,
+                    zoom: 14,
+                    speed: 2,
+                    essential: true
+                });
+                getCurrentCity(data[0],data[1]);
+                getWeatherInfo(data[1], data[0]);
+            });
+
+        })
+
+    $(document).on('keydown',function(e) {
+        const searchInput = $('#search-input');
+        if(e.keyCode === 13) {
+            e.preventDefault()
+            performSearch(searchInput.val());
+        }
+    });
+    function performSearch(query) {
+        // Implement your search functionality here
+
+        // Add your desired search logic
+    }
+
+
+        function getCurrentCity(lon, lat) {
+        const url = getWeatherURL(lat, lon);
+        $.get(url).done((data) => {
+            const currentCity = data.city.name;
+            $('#current-city').html(currentCity)
+        });
+    }
 
 
 
 
 // Events
-
 // Set an event listener
+
     map.on('click', (e) => {
         console.log(`A click event has occurred at ${e.lngLat}`);
         const clickedLng = e.lngLat.lng;
@@ -173,7 +226,7 @@ $(() => {
         // getWeatherInfo(lat, lon)
     });
 
-
+// document.querySelector('#search-btn').addEventListener('click', findAddress)
 
 
 
