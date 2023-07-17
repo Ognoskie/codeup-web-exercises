@@ -16,61 +16,64 @@ $(() => {
 // console.log(getWeatherURL(ALAMO_COORDINATES[0], ALAMO_COORDINATES[1]));
 
     const URL = getWeatherURL(...ALAMO_COORDINATES);
+    console.log(URL)
 
 // TODO: log full response from API
 
-    $.ajax(URL).done(data => {
-        console.log(data);
-    }).fail(console.error);
+    // $.ajax(URL).done(data => {
+    //     console.log(data);
+    // }).fail(console.error);
 
 
 // TODO: log various parts of the API
 
-    $.ajax(URL).done(data => {
-        renderWeather(data)
-        console.log(data);
-        // TODO: log the city name
-        console.log(data.city.name)
-        // TODO: log the first three-hour forecast block
-        console.log(data.list[0])
-        // TODO: log the humidity for the first three-hour block
-        console.log(data.list[0].main.humidity
-        )
-    }).fail(console.error);
+    function getWeatherInfo(lat, lon) {
+        $.ajax(getWeatherURL(lat, lon)).done(data => {
+            renderWeather(data)
+            console.log(data);
+            // TODO: log the city name
+            console.log(data.city.name)
+            // TODO: log the first three-hour forecast block
+            console.log(data.list[0])
+            // TODO: log the humidity for the first three-hour block
+            console.log(data.list[0].main.humidity
+            )
+        }).fail(console.error);
+    }
 
 
 // TODO: log the humidity for all days
 
-    $.ajax(getWeatherURL())
-        .done((data) => {
-//
-//         data.list.forEach((day, index) => {
-//             if (index % 8 === 0) {
-//                 console.log(day.main.humidity);
+//     $.ajax(getWeatherURL())
+//         .done((data) => {
+// //
+// //         data.list.forEach((day, index) => {
+// //             if (index % 8 === 0) {
+// //                 console.log(day.main.humidity);
+// //             }
+// //         });
+// //
+// //         // OR
+// //
+//             for (let i = 0; i < data.list.length; i += 8) {
+//                 console.log(data.list[i].main.humidity);
 //             }
-//         });
 //
-//         // OR
-//
-            for (let i = 0; i < data.list.length; i += 8) {
-                console.log(data.list[i].main.humidity);
-            }
-
-        })
-        .fail(console.error);
+//         })
+//         .fail(console.error);
 
 
 // TODO: log the min and max temp for each day
 
-    $.ajax(getWeatherURL(...ALAMO_COORDINATES))
-        .done(data => {
-            console.log(data);
-            const minMaxTemps = returnMinMaxTemps(data);
-            minMaxTemps.forEach(minMaxTemp => {
-                console.log(minMaxTemp);
-            });
-        })
-        .fail(console.error);
+    // $.ajax(getWeatherURL(...ALAMO_COORDINATES))
+    //     .done(data => {
+    //         console.log(data);
+    //         const minMaxTemps = returnMinMaxTemps(data);
+    //         minMaxTemps.forEach(minMaxTemp => {
+    //             console.log(minMaxTemp);
+    //         });
+    //     })
+    //     .fail(console.error);
 
 ////////////////////////////////////////////My code for weather map project////////////////////////////////////
 
@@ -89,9 +92,10 @@ $(() => {
 
 
 // Global
-    const map = startMap();
+   const map = startMap();
     const marker = createMarker();
     const popup = createPopup();
+
 
 
 
@@ -124,12 +128,13 @@ $(() => {
         const mapOptions = {
             container: 'map',
             style: 'mapbox://styles/mapbox/streets-v12',
-            zoom: 10,
+            zoom: 3,
             center: [-98.4916, 29.4252],
         }
 
         return new mapboxgl.Map(mapOptions);
     }
+
 
     function createMarker() {
         return new mapboxgl.Marker()
@@ -147,19 +152,21 @@ $(() => {
 
     function renderWeather(data) {
         for (let i = 0; i < data.list.length; i += 8) {
+            $('div.weather-cards').append(`
+                <div class="card">
+                <p>Temp high: ${data.list[i].main.temp_min}/ Temp low: ${data.list[i].main.temp_max}</p>
+                    <p>Description: ${data.list[i].weather[0].description}</p>
+                    <p>Humidity: ${data.list[i].main.humidity}</p>
+                    <p>Pressure: ${data.list[i].main.pressure}</p>
+                    <p>Wind: ${data.list[i].wind.speed}</p>
+                     <img src="http://openweathermap.org/img/w/${data.list[i].weather[0].icon}.png"
+                </div>
+            `)
 
         }
-        $('div.card').append(`
-            <div class="card">
-            <p>Temp high: ${data.list[i].main.temp_min }/ temp low: ${data.list[i].main.temp_max}</p>
-                <p>Description: ${data.list[i].weather[0].description}</p>
-                <p>Humidity: ${data.list[i].main.humidity}</p>
-                <p>Pressure: ${data.list[i].main.pressure}</p>
-                <p>Wind: ${data.list[i].wind.speed}</p>
-                 <img src="${data.list[i].weather[0].icon}"
-            </div>
-        `)
     }
+
+
 
 
 
@@ -186,7 +193,16 @@ $(() => {
 
 // Events
 
+// Set an event listener
+    map.on('click', (e) => {
+        console.log(`A click event has occurred at ${e.lngLat}`);
+        const clickedLng = e.lngLat.lng;
+        const clickedLat = e.lngLat.lat
+        getWeatherInfo(e.lngLat.lat, e.lngLat.lng)
+        // call function to create marker at specific lng and lat
 
+        // getWeatherInfo(lat, lon)
+    });
 
 
 
@@ -216,7 +232,8 @@ $(() => {
 
 //Runs when program loads
 
-map.setZoom(3);
+// map.setZoom();
+    getWeatherInfo(29.4252, -98.4916)
 
 
 
