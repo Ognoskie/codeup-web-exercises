@@ -27,6 +27,7 @@ $(() => {
 // TODO: log various parts of the API
 
     $.ajax(URL).done(data => {
+        renderWeather(data)
         console.log(data);
         // TODO: log the city name
         console.log(data.city.name)
@@ -40,7 +41,7 @@ $(() => {
 
 // TODO: log the humidity for all days
 
-    $.ajax(getWeatherURL(...ALAMO_COORDINATES))
+    $.ajax(getWeatherURL())
         .done((data) => {
 //
 //         data.list.forEach((day, index) => {
@@ -144,7 +145,21 @@ $(() => {
     }
 
 
+    function renderWeather(data) {
+        for (let i = 0; i < data.list.length; i += 8) {
 
+        }
+        $('div.card').append(`
+            <div class="card">
+            <p>Temp high: ${data.list[i].main.temp_min }/ temp low: ${data.list[i].main.temp_max}</p>
+                <p>Description: ${data.list[i].weather[0].description}</p>
+                <p>Humidity: ${data.list[i].main.humidity}</p>
+                <p>Pressure: ${data.list[i].main.pressure}</p>
+                <p>Wind: ${data.list[i].wind.speed}</p>
+                 <img src="${data.list[i].weather[0].icon}"
+            </div>
+        `)
+    }
 
 
 
