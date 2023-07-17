@@ -104,22 +104,6 @@ $(() => {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 //Functions
 
     function startMap() {
@@ -138,8 +122,9 @@ $(() => {
 
     function createMarker() {
         return new mapboxgl.Marker()
-        // .setLngLat([-98.4916, 29.4252])
-        // .addTo(map)
+        .setLngLat([-98.4916, 29.4252])
+        .addTo(map)
+
     }
 
 
@@ -151,6 +136,7 @@ $(() => {
 
 
     function renderWeather(data) {
+        $('div.weather-cards').empty();
         for (let i = 0; i < data.list.length; i += 8) {
             $('div.weather-cards').append(`
                 <div class="card">
@@ -172,25 +158,6 @@ $(() => {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // Events
 
 // Set an event listener
@@ -199,6 +166,8 @@ $(() => {
         const clickedLng = e.lngLat.lng;
         const clickedLat = e.lngLat.lat
         getWeatherInfo(e.lngLat.lat, e.lngLat.lng)
+        marker.setLngLat([clickedLng, clickedLat])
+
         // call function to create marker at specific lng and lat
 
         // getWeatherInfo(lat, lon)
@@ -208,60 +177,11 @@ $(() => {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 //Runs when program loads
 
 // map.setZoom();
     getWeatherInfo(29.4252, -98.4916)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    marker.setPopup(popup);
 
 
 
