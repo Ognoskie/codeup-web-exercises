@@ -111,7 +111,7 @@ $(() => {
 
         const mapOptions = {
             container: 'map',
-            style: 'mapbox://styles/mapbox/streets-v12',
+            style: 'mapbox://styles/mapbox/navigation-night-v1',
             zoom: 3,
             center: [-98.4916, 29.4252],
         }
@@ -141,6 +141,7 @@ $(() => {
         for (let i = 0; i < data.list.length; i += 8) {
             $('div.weather-cards').append(`
                 <div class="card">
+                <h5>Date: ${data.list[i].dt_txt}</h5>
                 <p>Temp high: ${data.list[i].main.temp_min}/ Temp low: ${data.list[i].main.temp_max}</p>
                     <p>Description: ${data.list[i].weather[0].description}</p>
                     <p>Humidity: ${data.list[i].main.humidity}</p>
@@ -157,7 +158,7 @@ $(() => {
         const coords = map.getCenter();
         let address = await reverseGeocode(coords, MAPBOX_STEVE_TOKEN)
         console.log(address);
-        document.querySelector('#search-div').value = `${address}`
+        document.querySelector('#search-wrapper').value = `${address}`
     }
 
 
@@ -236,6 +237,10 @@ $(() => {
     marker.setPopup(popup);
 
 
+
+
+
+//     search bar js
 
 
 })
