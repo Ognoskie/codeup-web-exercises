@@ -155,8 +155,9 @@ svg {
     background-color: transparent;
     border: solid;
 }
-
-
+input::-webkit-input-placeholder {
+    color: black;
+}
 
 
 
