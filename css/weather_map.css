@@ -147,8 +147,14 @@ svg {
 .weather-cards-mask:hover {
     height: 80vh;
 }
-
-
+.search-bar {
+    background-color: transparent;
+    border: solid;
+}
+.search-button{
+    background-color: transparent;
+    border: solid;
+}
 
 
 

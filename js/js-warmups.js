@@ -955,31 +955,31 @@ const hogwartsHouses = [
 
 // walkthrough
 
-function removeEvens(inputArray) {
-    // guard against anything that is NOT an array
-    if (!Array.isArray(inputArray)) {
-        return false;
-    }
-    // declare a new array that will hold odd numbers only
-    const oddNumbers = [];
-    // loop through input Array
-    for (const number of inputArray) {
-        // guard against any item in the array that is not a number
-        if (!isANumber(number)) {
-            return false;
-        }
-        // in the loop, check to see if our item is even or odd
-        if (number % 2 !== 0) {
-            //if odd add to our array
-            oddNumbers.push(number);
-        }
-
-    }
-    // after the loop, return our new array holding the odd numbers
-    return oddNumbers;
-}
-
-console.log(removeEvens([1, 2, 3, 4, 5]))
+// function removeEvens(inputArray) {
+//     // guard against anything that is NOT an array
+//     if (!Array.isArray(inputArray)) {
+//         return false;
+//     }
+//     // declare a new array that will hold odd numbers only
+//     const oddNumbers = [];
+//     // loop through input Array
+//     for (const number of inputArray) {
+//         // guard against any item in the array that is not a number
+//         if (!isANumber(number)) {
+//             return false;
+//         }
+//         // in the loop, check to see if our item is even or odd
+//         if (number % 2 !== 0) {
+//             //if odd add to our array
+//             oddNumbers.push(number);
+//         }
+//
+//     }
+//     // after the loop, return our new array holding the odd numbers
+//     return oddNumbers;
+// }
+//
+// console.log(removeEvens([1, 2, 3, 4, 5]))
 
 
 
