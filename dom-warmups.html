@@ -1,14 +1,110 @@
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <title>dom warm-ups</title>-->
+<!--</head>-->
+<!--<body id="body">-->
+<!--<div>-->
+<!--<button id="background-button" type="submit">Click me to change the background color</button>-->
+<!--</div>-->
+
+
+
+<!--<h3>The sum is: <span id="sum-output">0</span></h3>-->
+
+<!--<label for="number">Number</label>-->
+<!--<input id="number" type="number" name="number" min="0" max="5" value="0">-->
+<!--<button id="add-btn">Add</button>-->
+
+
+
+<!--  <script src="js/dom-warmups.js"></script>-->
+<!--</body>-->
+<!--</html>-->
+
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>dom warm-ups</title>
+    <title>DOM Manipulation Warmups</title>
 </head>
-<body id="body">
-<div>
-<button id="background-button" type="submit">Click me to change the background color</button>
-</div>
+<body>
 
-  <script src="js/dom-warmups.js"></script>
+<h3>The sum is: <span id="sum-output">0</span></h3>
+
+<label for="number">Number</label>
+<input id="number" type="number" name="number" min="0" max="5" value="0">
+<button id="add-btn">Add</button>
+
+<!--  Include the CDN script for jQuery below -->
+<script
+        src="http://code.jquery.com/jquery-2.2.4.min.js"
+        integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+        crossorigin="anonymous"></script>
+<script>
+
+    "use strict";
+
+    // TODO: add the needed JS so that the number selected in the number input will be added to the number in the span when the button is clicked
+
+// make event listener to button
+
+//      adds the sum to the h1
+
+    const spanDisplay = document.getElementById('sum-output');
+    const buttonAddNum = document.getElementById('add-btn');
+    const NumberDisplay = document.getElementById('number');
+
+
+    buttonAddNum.addEventListener('click', () => {
+        // returns button back down to zero
+        // spanDisplay.innerText = 0;
+     const inputValue = parseInt(NumberDisplay.value)
+        const currentResults = parseInt(spanDisplay.textContent)
+        const newResult = currentResults + inputValue;
+        spanDisplay.textContent = newResult;
+    })
+
+
+//     walkthrough
+
+    // clicks button and logs test
+
+    // click button and it logs the value in the input
+
+    // click button and it logs the sum of the current #sum-output value and the input
+
+    // click button and replaces #sum-output with the sum of #sum-output and input
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
 </body>
 </html>
