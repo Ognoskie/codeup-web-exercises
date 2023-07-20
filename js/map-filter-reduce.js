@@ -63,8 +63,64 @@ Can I afford it: ${canBuy}
                 console.log(house);
             }
 
+            // reduce method
+            // find most expensive house
+           const largestPrice = houses.reduce(/* function parameters*/(accumulator, house, index) => {
+                let price = parseFloat(house.price);
+                if (price > accumulator) {
+                    accumulator = price
+                }
+                    return accumulator;
+            } ,
+                /* initial value for accumulator*/ 0);
+            console.log(largestPrice.toLocaleString('en-US', {style: 'currency', currency: 'USD'}));
 
 
+
+            // how to find the cheapest house
+
+            const cheapestPrice = houses.reduce(/* function parameters*/(accumulator, house, index) => {
+                    let price = parseFloat(house.price);
+                    if (price < accumulator) {
+                        accumulator = price
+                    }
+                    return accumulator;
+                } ,
+                /* initial value for accumulator*/ parseFloat(houses[0].price));
+            console.log("least expensive => ", cheapestPrice.toLocaleString('en-US', {style: 'currency', currency: 'USD'}));
+
+            const allPrices = houses.reduce(/* function parameters*/(accumulator, house, index) => {
+                    let price = parseFloat(house.price);
+                    accumulator += price;
+                    return accumulator;
+                } ,
+                /* initial value for accumulator*/ parseFloat(houses[0].price));
+            console.log("total market price => ", allPrices.toLocaleString('en-US', {style: 'currency', currency: 'USD'}));
+
+
+            // how many houses were for sale in 2022
+            // what was the most expensive
+            // what was the cheapest
+            // what was the total of the market value
+
+            const dashboardObject = houses.reduce((accumulator, house, index) => {
+                accumulator.totalHouses++;
+                let price = parseFloat(house.price);
+                if (price > accumulator.mostExpensive) {
+                    accumulator.mostExpensive = price;
+                }
+                if (price < accumulator.cheapestHouse) {
+                    accumulator.cheapestHouse = price;
+                }
+                accumulator.totalMarketValue += price;
+                return accumulator;
+            }, {
+                totalHouses: 0,
+                mostExpensive: 0,
+                cheapestHouse: parseFloat(houses[0].price),
+                totalMarketValue: 0
+            });
+            console.log(dashboardObject);
 
 
         });
@@ -73,4 +129,14 @@ Can I afford it: ${canBuy}
 
 
 
+
+
 })();
+
+
+// // reduce method
+// // find most expensive house
+// houses.reduce(/* function parameters*/(accumulator, currentValue, index) => {
+//         return accumulator;
+//     } ,
+//     /* initial value for accumulator*/ 0);
