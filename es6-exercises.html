@@ -85,15 +85,14 @@
   // TODO: Refactor the following code to use ES6 syntax. The output should stay the same.
   // consider the type of loop, concatenation and how variables are declared
 
-  let message = '';
-  const names = ['John', 'Paul', 'George', 'Ringo'];
-  // for (let i = 0; i < names.length; i += 1) {
-
-      for (let name of names){
-        message += `Hello, ${name} \n`
-
-  }
-  console.log(message);
+  // let message = '';
+  // const names = ['John', 'Paul', 'George', 'Ringo'];
+  // // for (let i = 0; i < names.length; i += 1) {
+  //
+  //     for (let name of names){
+  //       message += `Hello, ${name} \n`
+  // }
+  // console.log(message);
 
 
 
@@ -102,10 +101,8 @@
   // TODO: Refactor the following code to use ES6 syntax. The output should stay the same.
   // consider how the function is defined
 
-  // var doubleInput = function(input) {
-  //     return input * 2;
-  // }
-
+  // const doubleInput = input => input * 2;
+  //
   // console.log(doubleInput(5));
 
 
@@ -296,22 +293,18 @@
   // TODO: Refactor the following code to use ES6 syntax. The output should stay the same.
   // consider how property values are added to the object and then used in the function
 
-  // function printAuthDetails(user) {
-  //   console.log(`The username is ${user.username}`);
-  //   console.log(`The email is ${user.email}`);
-  // }
-  //
-  // const email = prompt('Enter an email address');
-  // const username = prompt('Enter an a username');
-  // const password = prompt('Enter a password');
-  //
-  // const user = {
-  //   email: email,
-  //   username: username,
-  //   password: password
-  // };
-  //
-  // printAuthDetails(user);
+  const printAuthDetails = (user) => console.log(`
+   The username is: ${user.username}
+   The email is: ${user.email}
+   `) ;
+
+  const user = {
+    email: prompt('Enter an email address'),
+    username: prompt('Enter an a username'),
+    password: prompt('Enter a password')
+  };
+
+  printAuthDetails(user);
 
 </script>
 
