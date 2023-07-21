@@ -15,7 +15,7 @@
 //        })
 //
 // }
-//
+
 //
 // const getFilm = (url) => {
 //         const filmUrl = url;
@@ -58,7 +58,7 @@
 
 
 
-// Exercise
+// Exercise .then
 
 
 const getEvents = (userName = "ognoskie") => {
@@ -79,12 +79,6 @@ const getEvents = (userName = "ognoskie") => {
 }
 
 
-
-
-
-
-
-
 (() => { //IIFE (Immediately Invoked Function Expression)
 
     getEvents("ognoskie").then((events) => {
@@ -93,10 +87,6 @@ const getEvents = (userName = "ognoskie") => {
             return event.type === "PushEvent"
         });
         console.log(pushEvents[0].created_at)
-        // const lastEvent = pushEvents[0]
-        // getCommitTime(lastEvent).then((commit) => {
-        //     console.log(commit)
-        // })
     })
 
 
@@ -106,7 +96,7 @@ const getEvents = (userName = "ognoskie") => {
 
 
 
-
+// Exercise async/await
 
 
 
