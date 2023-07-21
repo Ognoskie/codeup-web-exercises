@@ -46,42 +46,58 @@
 // })();
 
 
-const getUserName = (login = 1) => {
-    const url = `https://api.github.com/users/${login}/events`;
+
+
+
+
+
+
+
+
+
+
+
+
+// Exercise
+
+
+const getEvents = (userName = "ognoskie") => {
+    const url = `https://api.github.com/users/${userName}/events`;
     const options  = {
         method: "GET",
         headers: {
             "Authorization": `token ${PROMISE_GITHUB_TOKEN}` ,
         }
     }
-return fetch(url, options)
-    .then((response) => {
-        return response.json();
-    })
-    .catch(error => {
-        console.log(error.message)
-    })
+    return fetch(url, options)
+        .then((response) => {
+            return response.json();
+        })
+        .catch(error => {
+            console.log(error.message)
+        })
 }
+
+
+
+
 
 
 
 
 (() => { //IIFE (Immediately Invoked Function Expression)
 
-    const url= "https://api.github.com/users/ognoskie/events"
-    const options  = {
-        method: "GET",
-        headers: {
-            "Authorization": `token ${PROMISE_GITHUB_TOKEN}` ,
-        }
-    }
-
-    fetch(url, options)
-        .then(response => response.json())
-        .then(data => {
-            console.log(data);
-        })
-
+    getEvents("ognoskie").then((events) => {
+        console.log(events);
+        const pushEvents = events.filter(event => {
+            return event.type === "PushEvent"
+        });
+        console.log(pushEvents[0].created_at)
+        // const lastEvent = pushEvents[0]
+        // getCommitTime(lastEvent).then((commit) => {
+        //     console.log(commit)
+        // })
+    })
 
 
 })();
