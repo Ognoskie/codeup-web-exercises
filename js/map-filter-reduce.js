@@ -136,7 +136,7 @@
 //         });
 
 
-
+// Exercises
 
     const users = [
         {
@@ -212,7 +212,7 @@ const userEmail = users.map(data => {
         accumulator += total;
         return accumulator
     },
-        users[0].yearsOfExperience);
+        0);
     console.log(totalExperience);
 
     console.log(totalExperience / users.length);
@@ -240,6 +240,17 @@ const userEmail = users.map(data => {
        "" )
     console.log(instructorsNames)
 
+    const userString = users.reduce((accumulator, data, index) => {
+        if (index === (data.length - 2)) {
+            accumulator += `${data.name} `
+        } else if (index === (data.length - 1)) {
+            accumulator += `and ${data.name}.`
+        } else {
+            accumulator += `${data.name}, `
+        }
+        return accumulator
+    },'Your instructors are: ')
+    console.log(userString)
 
 })();
 
