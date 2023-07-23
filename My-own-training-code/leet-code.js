@@ -179,6 +179,25 @@ const twoSum = (nums, target) => {
 };
 
 
+/////////////////////////// 30 days of js///////////////////////////////
+
+// helloWorld function
+
+/**
+ * @return {Function}
+ */
+var createHelloWorld = function() {
+    return function(...args) {
+
+    }
+};
+
+/**
+ * const f = createHelloWorld();
+ * f(); // "Hello World"
+ */
+
+
 
 
 

@@ -53,13 +53,55 @@ const getFilm = async (url) => {
 
 
 
+
+// example for movies project
+
+
+const getPeople = async () => {
+    const url = 'https://swapi.dev/api/people/';
+    const options = {
+        method: "GET",
+        headers: {
+            "Content-Type": "application/json"
+        }
+    }
+}
+
+
+
+
+
+
+
+
 ( async ()=>{
-    const luke = await getPerson(1);
-    console.log(luke)
-    const firstFilm = await getFilm(luke.films[0]);
-    console.log(firstFilm);
+    // const luke = await getPerson(1);
+    // console.log(luke)
+    // const firstFilm = await getFilm(luke.films[0]);
+    // console.log(firstFilm);
+
+
+
 
 
 
 
 })();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
