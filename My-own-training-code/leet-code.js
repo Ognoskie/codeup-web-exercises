@@ -238,3 +238,20 @@ const createHelloWorld = function() {
 // Explanation: counter() initially returns -2. Then increases after each sebsequent call.
 
 
+
+/**
+ * @param {number} n
+ * @return {Function} counter
+ */
+let counter = 0
+let createCounter = function(n) {
+    counter++
+    console.log(counter)
+}
+
+/**
+ * const counter = createCounter(10)
+ * counter() // 10
+ * counter() // 11
+ * counter() // 12
+ */
