@@ -255,6 +255,37 @@ const userEmail = users.map(data => {
 })();
 
 
+// Approach:
+// To achieve the desired output, we can use the .reduce() method on the users array. The .reduce() method takes a callback function that will be applied to each element in the array to accumulate a final result.
+//
+// The callback function of .reduce() takes four parameters:
+//
+// accumulator: The initial value or the value returned from the previous iteration (starts with an empty string "" in our case).
+// currentValue: The current element being processed in the array (a user object in our case).
+// currentIndex: The index of the current element being processed in the array.
+// array: The array that the .reduce() method is being called on (the users array in our case).
+
+
+
+
+// Solution:
+//
+// We start with an initial value for the accumulator, which is an empty string: "".
+// For the first user in the users array (when the currentIndex is 0), we add the "Your instructors are: " string as a prefix to the name of the first user. This forms the initial value of the accumulator.
+// For subsequent users (when the currentIndex is greater than 0), we add a comma and a space ", " followed by the name of the current user to the accumulator.
+// The .reduce() method keeps iterating through all the user objects, and at each step, it accumulates the names of the users in the desired format.
+// Finally, the .reduce() method returns the final concatenated string, which contains all the user names in the specified format.
+// In the provided JavaScript code example, we implement the above solution using the .reduce() method to get the desired output:
+
+
+
+
+
+
+
+
+
+
 // // reduce method
 // // find most expensive house
 // houses.reduce(/* function parameters*/(accumulator, currentValue, index) => {
