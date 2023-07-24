@@ -243,11 +243,9 @@ const createHelloWorld = function() {
  * @param {number} n
  * @return {Function} counter
  */
-let counter = 0
 let createCounter = function(n) {
-    counter++
-    console.log(counter)
-}
+    return ()=> n++
+};
 
 /**
  * const counter = createCounter(10)
@@ -255,3 +253,6 @@ let createCounter = function(n) {
  * counter() // 11
  * counter() // 12
  */
+
+
+//
