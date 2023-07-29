@@ -50,8 +50,8 @@ const problemTwoDone = () => {
 
 }
 const problemThreeDone = () => {
-
-}
+location.reload(true);
+};
 const problemEight = () => {
     for (const h4 of h4List) {
         h4.classList.toggle('problem-8-color')
