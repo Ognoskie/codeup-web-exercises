@@ -48,15 +48,19 @@ const problemTwoDone = () => {
     let input = problemTwoInput;
     bodyColor.style.backgroundColor = input.value
 
-}
+};
 const problemThreeDone = () => {
 location.reload(true);
 };
+const problemFourDone = () => {
+    window.location.href = "https://java.codeup.com/javascript-i/bom-and-dom/bom/"
+}
 const problemEight = () => {
     for (const h4 of h4List) {
         h4.classList.toggle('problem-8-color')
     }
-}
+};
+
 
 
 
@@ -68,7 +72,7 @@ const problemEight = () => {
 problemOne.addEventListener("click", problemOneDone)
 problemTwoBtn.addEventListener("click", problemTwoDone)
 problemThreeBtn.addEventListener('click', problemThreeDone)
-problemFourBtn.addEventListener('click', problemFour)
+problemFourBtn.addEventListener('click', problemFourDone)
 for (const h4 of h4List) {
     h4.addEventListener('click', problemEight);
 }
