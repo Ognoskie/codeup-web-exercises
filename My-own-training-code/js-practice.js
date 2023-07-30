@@ -31,6 +31,8 @@ const problemTwoInput = document.getElementById('problem-2-input');
 const h4List = document.querySelectorAll('h4');
 const problemThreeBtn = document.getElementById('problem-3-btn');
 const problemFourBtn = document.getElementById('problem-4-btn');
+const problemFive = document.getElementById('problem-5-p');
+
 
 
 
@@ -54,7 +56,10 @@ location.reload(true);
 };
 const problemFourDone = () => {
     window.location.href = "https://java.codeup.com/javascript-i/bom-and-dom/bom/"
-}
+};
+const problemFiveDone = () => {
+    problemFive.classList.toggle('problem-5-color')
+};
 const problemEight = () => {
     for (const h4 of h4List) {
         h4.classList.toggle('problem-8-color')
@@ -73,6 +78,7 @@ problemOne.addEventListener("click", problemOneDone)
 problemTwoBtn.addEventListener("click", problemTwoDone)
 problemThreeBtn.addEventListener('click', problemThreeDone)
 problemFourBtn.addEventListener('click', problemFourDone)
+problemFive.addEventListener('dblclick', problemFiveDone)
 for (const h4 of h4List) {
     h4.addEventListener('click', problemEight);
 }
