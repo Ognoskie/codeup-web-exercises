@@ -33,6 +33,7 @@ const problemThreeBtn = document.getElementById('problem-3-btn');
 const problemFourBtn = document.getElementById('problem-4-btn');
 const problemFive = document.getElementById('problem-5-p');
 const problemSixInput = document.getElementById('problem-6-input');
+const spanSixElement = document.getElementById('problem-6-span');
 
 
 
@@ -61,7 +62,9 @@ const problemFourDone = () => {
 const problemFiveDone = () => {
     problemFive.classList.toggle('problem-5-color')
 };
-
+const problemSixDone = () => {
+    spanSixElement.textContent = problemSixInput.value
+}
 const problemEight = () => {
     for (const h4 of h4List) {
         h4.classList.toggle('problem-8-color')
