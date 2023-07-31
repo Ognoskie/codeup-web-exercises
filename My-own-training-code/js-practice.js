@@ -32,6 +32,7 @@ const h4List = document.querySelectorAll('h4');
 const problemThreeBtn = document.getElementById('problem-3-btn');
 const problemFourBtn = document.getElementById('problem-4-btn');
 const problemFive = document.getElementById('problem-5-p');
+const problemSixInput = document.getElementById('problem-6-input');
 
 
 
@@ -60,6 +61,7 @@ const problemFourDone = () => {
 const problemFiveDone = () => {
     problemFive.classList.toggle('problem-5-color')
 };
+
 const problemEight = () => {
     for (const h4 of h4List) {
         h4.classList.toggle('problem-8-color')
@@ -79,6 +81,7 @@ problemTwoBtn.addEventListener("click", problemTwoDone)
 problemThreeBtn.addEventListener('click', problemThreeDone)
 problemFourBtn.addEventListener('click', problemFourDone)
 problemFive.addEventListener('dblclick', problemFiveDone)
+problemSixInput.addEventListener('keypress', problemSixDone)
 for (const h4 of h4List) {
     h4.addEventListener('click', problemEight);
 }
