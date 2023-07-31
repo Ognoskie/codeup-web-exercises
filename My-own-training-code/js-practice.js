@@ -34,7 +34,7 @@ const problemFourBtn = document.getElementById('problem-4-btn');
 const problemFive = document.getElementById('problem-5-p');
 const problemSixInput = document.getElementById('problem-6-input');
 const spanSixElement = document.getElementById('problem-6-span');
-const problemSevenElement = document.getElementById('problem-7-li');
+const problemSevenElement = document.getElementsByClassName('problem-7-li');
 
 
 
@@ -66,8 +66,8 @@ const problemFiveDone = () => {
 const problemSixDone = () => {
     spanSixElement.textContent = problemSixInput.value
 };
-const problemSevenDone = () => {
-    problemSevenElement.classList.toggle('orange');
+const problemSevenDone = (e) => {
+    e.target.style.backgroundColor = 'orange'
 };
 const problemEight = () => {
     for (const h4 of h4List) {
@@ -90,6 +90,9 @@ problemFourBtn.addEventListener('click', problemFourDone)
 problemFive.addEventListener('dblclick', problemFiveDone)
 problemSixInput.addEventListener('keypress', problemSixDone)
 problemSevenElement.addEventListener('click', problemSevenDone);
+for (li of problemSevenElement) {
+    li.addEventListener('click', problemSevenDone)
+}
 for (const h4 of h4List) {
     h4.addEventListener('click', problemEight);
 }
